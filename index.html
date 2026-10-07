@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;800&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --iron: #1c1613;        /* charred wood background */
@@ -17,8 +17,8 @@
     --bronze: #c8a253;      /* trim and highlights */
     --bone: #eadfc8;        /* main text */
     --ash: #9c8e78;         /* secondary text */
-    --display: "Montserrat", "Palatino Linotype", Georgia, serif;
-    --body: "Montserrat", Georgia, "Times New Roman", serif;
+    --display: "Grenze Gotisch", "Palatino Linotype", Georgia, serif;
+    --body: "Alegreya", Georgia, "Times New Roman", serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -31,14 +31,15 @@
   }
 
   /* Banner image */
-  .image-banner { width: min(92%, 960px); margin: 1.5rem auto 0; }
+  .image-banner { width: 100%; margin: 0; }
   .image-banner h1 { margin: 0; }
   .image-banner img {
     display: block;
     width: 100%;
-    height: auto;
-    border: 2px solid var(--bronze);
-    border-radius: 3px;
+    height: clamp(120px, 18vw, 240px);
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 3px solid var(--bronze);
   }
 
   /* Menu bar: stays at the top of the screen while scrolling */
@@ -48,7 +49,6 @@
     z-index: 10;
     background: var(--iron);
     border-bottom: 2px solid var(--blood);
-    margin-top: 1.5rem;
   }
   .menu ul {
     list-style: none;
@@ -134,13 +134,14 @@
     padding: 0 1rem;
   }
   td { background: var(--iron-raised); padding: 0.7rem 1rem; }
-  td:first-child { border-radius: 3px 0 0 3px; width: 6rem; }
-  .rank-cell { display: flex; align-items: center; gap: 1rem; }
+  td:first-child { border-radius: 3px 0 0 3px; width: 4rem; }
+  .class-col { width: 4rem; text-align: center; }
   .class-icon {
     width: 28px;
     height: 28px;
     border-radius: 4px;
     border: 1px solid var(--bronze);
+    vertical-align: middle;
   }
   td:last-child { border-radius: 0 3px 3px 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
   th:last-child { text-align: right; }
@@ -191,7 +192,7 @@
     <h2 id="board-title">Loading…</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Rank</th><th>Player</th><th id="value-heading"></th></tr></thead>
+        <thead><tr><th>Rank</th><th class="class-col">Class</th><th>Player</th><th id="value-heading"></th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
@@ -212,15 +213,16 @@
     Priest: "#ffffff", Shaman: "#4a9eff", Mage: "#3fc7eb", Warlock: "#9fa0f5", Druid: "#ff7c0a",
     "Death Knight": "#e0435a", "Demon Hunter": "#c26fe0", Monk: "#00ff98", Evoker: "#4fc2a8"
   };
-  
+
   // Class icons in images/class_icons. Classes not listed here show no icon.
+  // File names must match exactly, capital letters included.
   const ICON_FOLDER = "images/class_icons/";
   const CLASS_ICONS = {
     Warrior: "warrior.png", Paladin: "paladin.png", Hunter: "hunter.png",
     Rogue: "rogue.png", Priest: "priest.png", Shaman: "shaman.png",
     Mage: "mage.png", Warlock: "warlock.png", Druid: "druid.png"
   };
-  
+
   let data;
 
   function showBoard(category) {
@@ -246,7 +248,8 @@
       const tr = document.createElement("tr");
       if (rank <= 3) tr.className = "top r" + rank;
       tr.innerHTML = `
-        <td><div class="rank-cell"><span class="rank">${rank}</span>${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="">` : ""}</div></td>
+        <td><span class="rank">${rank}</span></td>
+        <td class="class-col">${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="${p.class}">` : ""}</td>
         <td><span class="player"></span><span class="meta"></span></td>
         <td>${value.toLocaleString()}</td>`;
       const name = tr.querySelector(".player");
@@ -318,7 +321,7 @@
     .catch(() => {
       document.getElementById("board-title").textContent = "The leaderboard couldn't load";
       document.getElementById("rows").innerHTML =
-        '<tr><td colspan="3">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
+        '<tr><td colspan="4">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
     });
 </script>
 </body>
