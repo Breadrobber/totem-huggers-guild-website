@@ -134,7 +134,14 @@
     padding: 0 1rem;
   }
   td { background: var(--iron-raised); padding: 0.7rem 1rem; }
-  td:first-child { border-radius: 3px 0 0 3px; width: 4rem; }
+  td:first-child { border-radius: 3px 0 0 3px; width: 6rem; }
+  .rank-cell { display: flex; align-items: center; gap: 0.5rem; }
+  .class-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid var(--bronze);
+  }
   td:last-child { border-radius: 0 3px 3px 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
   th:last-child { text-align: right; }
 
@@ -205,7 +212,15 @@
     Priest: "#ffffff", Shaman: "#4a9eff", Mage: "#3fc7eb", Warlock: "#9fa0f5", Druid: "#ff7c0a",
     "Death Knight": "#e0435a", "Demon Hunter": "#c26fe0", Monk: "#00ff98", Evoker: "#4fc2a8"
   };
-
+  
+  // Class icons in images/class_icons. Classes not listed here show no icon.
+  const ICON_FOLDER = "images/class_icons/";
+  const CLASS_ICONS = {
+    Warrior: "warrior.png", Paladin: "paladin.png", Hunter: "hunter.png",
+    Rogue: "rogue.png", Priest: "priest.png", Shaman: "shaman.png",
+    Mage: "mage.png", Warlock: "warlock.png", Druid: "druid.png"
+  };
+  
   let data;
 
   function showBoard(category) {
@@ -231,7 +246,7 @@
       const tr = document.createElement("tr");
       if (rank <= 3) tr.className = "top r" + rank;
       tr.innerHTML = `
-        <td><span class="rank">${rank}</span></td>
+        <td><div class="rank-cell"><span class="rank">${rank}</span>${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="">` : ""}</div></td>
         <td><span class="player"></span><span class="meta"></span></td>
         <td>${value.toLocaleString()}</td>`;
       const name = tr.querySelector(".player");
