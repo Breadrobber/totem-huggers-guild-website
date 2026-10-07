@@ -1,0 +1,26 @@
+name: List available stats
+
+on:
+  workflow_dispatch:   # only runs when you click "Run workflow"
+
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: List every statistic for one character
+        run: node collector/list-stats.js
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+
+      - name: Save the list as a download
+        uses: actions/upload-artifact@v6
+        with:
+          name: stats-list
+          path: stats-list.txt
