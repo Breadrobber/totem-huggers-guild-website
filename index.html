@@ -1,12 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guild Leaderboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Totem Huggers Leaderboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;800&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --iron: #1c1613;        /* charred wood background */
+    --iron-raised: #2a211c; /* table rows */
+    --blood: #8c1c13;       /* Horde banner red */
+    --blood-deep: #5e120c;
+    --bronze: #c8a253;      /* trim and highlights */
+    --bone: #eadfc8;        /* main text */
+    --ash: #9c8e78;         /* secondary text */
+    --display: "Grenze Gotisch", "Palatino Linotype", Georgia, serif;
+    --body: "Alegreya", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--iron);
+    color: var(--bone);
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  /* The hanging war banner */
+  .banner {
+    width: min(92%, 560px);
+    margin: 0 auto;
+    padding: 3.5rem 2rem 5.5rem;
+    background: linear-gradient(180deg, var(--blood) 0%, var(--blood-deep) 100%);
+    border-left: 6px solid var(--bronze);
+    border-right: 6px solid var(--bronze);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+    text-align: center;
+  }
+  .banner::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background: var(--bronze);
+    margin: -3.5rem -2rem 3rem;
+  }
+  .banner h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.8rem, 9vw, 4.5rem);
+    line-height: 0.95;
+    color: var(--bone);
+    text-shadow: 0 3px 0 var(--blood-deep);
+  }
+  .banner p {
+    margin: 1rem 0 0;
+    color: #f0c9b8;
+    font-size: 1.05rem;
+  }
+
+  main { width: min(92%, 760px); margin: 2.5rem auto 4rem; }
+
+  .notice {
+    border: 1px solid #4a3a2c;
+    border-left: 4px solid var(--bronze);
+    padding: 0.75rem 1rem;
+    margin-bottom: 2rem;
+    color: var(--ash);
+    font-size: 1rem;
+  }
+  .notice strong { color: var(--bone); }
+
+  /* Category switcher */
+  .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .tabs button {
+    font: inherit;
+    font-size: 1rem;
+    padding: 0.45rem 1rem;
+    background: transparent;
+    color: var(--bone);
+    border: 1px solid #5a4636;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .tabs button:hover { border-color: var(--bronze); }
+  .tabs button[aria-pressed="true"] {
+    background: var(--blood);
+    border-color: var(--bronze);
+  }
+  button:focus-visible { outline: 3px solid var(--bronze); outline-offset: 2px; }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0 0 0.75rem;
+    color: var(--bronze);
+  }
+
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+  th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--ash);
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+  td { background: var(--iron-raised); padding: 0.7rem 1rem; }
+  td:first-child { border-radius: 3px 0 0 3px; width: 4rem; }
+  td:last-child { border-radius: 0 3px 3px 0; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  th:last-child { text-align: right; }
+
+  .rank {
+    display: inline-grid;
+    place-items: center;
+    width: 2.1rem; height: 2.1rem;
+    font-weight: 700;
+    color: var(--ash);
+  }
+  .top .rank { border-radius: 50%; color: var(--iron); }
+  .r1 .rank { background: var(--bronze); }
+  .r2 .rank { background: #b9b2a6; }
+  .r3 .rank { background: #a8693f; }
+  .r1 td { box-shadow: inset 0 1px 0 #4d3c22, inset 0 -1px 0 #4d3c22; }
+
+  .player { font-weight: 700; }
+  .meta { display: block; font-size: 0.9rem; color: var(--ash); font-weight: 400; }
+
+  footer { text-align: center; color: var(--ash); font-size: 0.9rem; padding-bottom: 3rem; }
+
+  @media (max-width: 520px) {
+    td, th { padding-left: 0.6rem; padding-right: 0.6rem; }
+    .banner { padding-bottom: 4.5rem; }
+  }
+</style>
 </head>
 <body>
-  <h1>&lt;Totem Huggers&gt; Leaderboard</h1>
-  <p>Coming soon — tracking our guild's achievements and stats.</p>
+  <header class="banner">
+    <h1>Totem Huggers</h1>
+    <p>Horde guild leaderboard</p>
+  </header>
+
+  <main>
+    <div class="notice" id="notice" hidden>
+      <strong>Sample data.</strong> These are made-up players so we can test the page. Real guild stats arrive after WoW: Forever launches on November 4.
+    </div>
+
+    <div class="tabs" id="tabs" role="group" aria-label="Choose a leaderboard"></div>
+    <h2 id="board-title">Loading…</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rank</th><th>Player</th><th id="value-heading"></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer id="updated"></footer>
+
+<script>
+  const CLASS_COLORS = {
+    Warrior: "#c69b6d", Paladin: "#f48cba", Hunter: "#aad372", Rogue: "#fff468",
+    Priest: "#ffffff", Shaman: "#4a9eff", Mage: "#3fc7eb", Warlock: "#9fa0f5", Druid: "#ff7c0a"
+  };
+
+  let data;
+
+  function showBoard(category) {
+    document.querySelectorAll("#tabs button").forEach(b => {
+      b.setAttribute("aria-pressed", b.dataset.key === category.key ? "true" : "false");
+    });
+    document.getElementById("board-title").textContent = category.label;
+    document.getElementById("value-heading").textContent = category.order === "asc" ? "Deaths" : category.label;
+
+    const sorted = [...data.players].sort((a, b) =>
+      category.order === "asc"
+        ? a.stats[category.key] - b.stats[category.key]
+        : b.stats[category.key] - a.stats[category.key]
+    );
+
+    const rows = document.getElementById("rows");
+    rows.innerHTML = "";
+    let rank = 0, lastValue = null;
+    sorted.forEach((p, i) => {
+      const value = p.stats[category.key];
+      if (value !== lastValue) { rank = i + 1; lastValue = value; } // tied players share a rank
+      const tr = document.createElement("tr");
+      if (rank <= 3) tr.className = "top r" + rank;
+      tr.innerHTML = `
+        <td><span class="rank">${rank}</span></td>
+        <td><span class="player"></span><span class="meta"></span></td>
+        <td>${value.toLocaleString()}</td>`;
+      const name = tr.querySelector(".player");
+      name.textContent = p.name;
+      name.style.color = CLASS_COLORS[p.class] || "inherit";
+      tr.querySelector(".meta").textContent = `${p.race} ${p.class}`;
+      rows.appendChild(tr);
+    });
+  }
+
+  fetch("players.json")
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(json => {
+      data = json;
+      document.getElementById("notice").hidden = !data.sampleData;
+      document.getElementById("updated").textContent = `Last updated ${data.updated}`;
+      const tabs = document.getElementById("tabs");
+      data.categories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.textContent = cat.label;
+        btn.dataset.key = cat.key;
+        btn.addEventListener("click", () => showBoard(cat));
+        tabs.appendChild(btn);
+      });
+      showBoard(data.categories[0]);
+    })
+    .catch(() => {
+      document.getElementById("board-title").textContent = "The leaderboard couldn't load";
+      document.getElementById("rows").innerHTML =
+        '<tr><td colspan="3">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
+    });
+</script>
 </body>
 </html>
