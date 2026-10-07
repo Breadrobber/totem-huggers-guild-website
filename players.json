@@ -1,27 +1,399 @@
 {
-  "guild": "Totem Huggers",
-  "faction": "Horde",
-  "sampleData": true,
+  "guild": "Not Clan",
+  "faction": "Alliance",
+  "sampleData": false,
   "updated": "2026-10-07",
   "categories": [
-    { "key": "level",     "label": "Level",            "order": "desc" },
-    { "key": "honorKills","label": "Honorable kills",  "order": "desc" },
-    { "key": "quests",    "label": "Quests completed", "order": "desc" },
-    { "key": "dungeons",  "label": "Dungeons cleared", "order": "desc" },
-    { "key": "deaths",    "label": "Fewest deaths",    "order": "asc"  }
+    {
+      "key": "achievementPoints",
+      "label": "Achievement points",
+      "order": "desc"
+    },
+    {
+      "key": "itemLevel",
+      "label": "Item level",
+      "order": "desc"
+    },
+    {
+      "key": "mounts",
+      "label": "Mounts collected",
+      "order": "desc"
+    },
+    {
+      "key": "quests",
+      "label": "Quests completed",
+      "order": "desc"
+    },
+    {
+      "key": "deaths",
+      "label": "Fewest deaths",
+      "order": "asc"
+    }
   ],
   "players": [
-    { "name": "Grakka Stonehoof",  "class": "Shaman",  "race": "Tauren",    "stats": { "level": 60, "honorKills": 1842, "quests": 612, "dungeons": 87,  "deaths": 143 } },
-    { "name": "Zul'jin Mossfang",  "class": "Hunter",  "race": "Troll",     "stats": { "level": 60, "honorKills": 2310, "quests": 588, "dungeons": 64,  "deaths": 98 } },
-    { "name": "Morga Ashgrip",     "class": "Warrior", "race": "Orc",       "stats": { "level": 60, "honorKills": 2975, "quests": 540, "dungeons": 112, "deaths": 211 } },
-    { "name": "Velric Duskmourne", "class": "Warlock", "race": "Undead",    "stats": { "level": 58, "honorKills": 1204, "quests": 497, "dungeons": 58,  "deaths": 176 } },
-    { "name": "Hakoa Windrunner",  "class": "Druid",   "race": "Tauren",    "stats": { "level": 60, "honorKills": 640,  "quests": 655, "dungeons": 95,  "deaths": 61 } },
-    { "name": "Thrak Bonesplitter","class": "Paladin", "race": "Orc",       "stats": { "level": 57, "honorKills": 980,  "quests": 461, "dungeons": 49,  "deaths": 133 } },
-    { "name": "Silka Rotwhisper",  "class": "Priest",  "race": "Undead",    "stats": { "level": 60, "honorKills": 412,  "quests": 603, "dungeons": 121, "deaths": 89 } },
-    { "name": "Jin'ra Tidecaller", "class": "Shaman",  "race": "Troll",     "stats": { "level": 54, "honorKills": 355,  "quests": 402, "dungeons": 33,  "deaths": 72 } },
-    { "name": "Ulgar Redtusk",     "class": "Rogue",   "race": "Orc",       "stats": { "level": 60, "honorKills": 3402, "quests": 521, "dungeons": 70,  "deaths": 258 } },
-    { "name": "Neska Grimbloom",   "class": "Mage",    "race": "Undead",    "stats": { "level": 59, "honorKills": 1588, "quests": 549, "dungeons": 81,  "deaths": 164 } },
-    { "name": "Tahu Plainstrider", "class": "Hunter",  "race": "Tauren",    "stats": { "level": 47, "honorKills": 120,  "quests": 318, "dungeons": 19,  "deaths": 40 } },
-    { "name": "Kezzik Sparkfuse",  "class": "Mage",    "race": "Troll",     "stats": { "level": 52, "honorKills": 276,  "quests": 377, "dungeons": 27,  "deaths": 95 } }
+    {
+      "name": "Nottuesday",
+      "class": "Priest",
+      "race": "Human",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 20170,
+        "itemLevel": 594,
+        "mounts": 285,
+        "quests": 3056,
+        "deaths": 2260
+      }
+    },
+    {
+      "name": "Notmonday",
+      "class": "Druid",
+      "race": "Night Elf",
+      "stats": {
+        "level": 77,
+        "achievementPoints": 19540,
+        "itemLevel": 353,
+        "mounts": 278,
+        "quests": 1462,
+        "deaths": 356
+      }
+    },
+    {
+      "name": "Shine",
+      "class": "Paladin",
+      "race": "Lightforged Draenei",
+      "stats": {
+        "level": 64,
+        "achievementPoints": 22980,
+        "itemLevel": 278,
+        "mounts": 384,
+        "quests": 3563,
+        "deaths": 997
+      }
+    },
+    {
+      "name": "Wraith",
+      "class": "Death Knight",
+      "race": "Void Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23390,
+        "itemLevel": 566,
+        "mounts": 392,
+        "quests": 2062,
+        "deaths": 675
+      }
+    },
+    {
+      "name": "Karma",
+      "class": "Monk",
+      "race": "Void Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23390,
+        "itemLevel": 611,
+        "mounts": 391,
+        "quests": 1699,
+        "deaths": 602
+      }
+    },
+    {
+      "name": "Arc",
+      "class": "Mage",
+      "race": "Human",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23390,
+        "itemLevel": 610,
+        "mounts": 391,
+        "quests": 1511,
+        "deaths": 190
+      }
+    },
+    {
+      "name": "Onyx",
+      "class": "Warrior",
+      "race": "Dracthyr",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23390,
+        "itemLevel": 570,
+        "mounts": 391,
+        "quests": 1954,
+        "deaths": 820
+      }
+    },
+    {
+      "name": "Rainade",
+      "class": "Hunter",
+      "race": "Human",
+      "stats": {
+        "level": 90,
+        "achievementPoints": 20755,
+        "itemLevel": 217,
+        "mounts": 302,
+        "quests": 4911,
+        "deaths": 4556
+      }
+    },
+    {
+      "name": "Shayne",
+      "class": "Hunter",
+      "race": "Void Elf",
+      "stats": {
+        "level": 60,
+        "achievementPoints": 23190,
+        "itemLevel": 204,
+        "mounts": 385,
+        "quests": 2895,
+        "deaths": 588
+      }
+    },
+    {
+      "name": "Vesper",
+      "class": "Rogue",
+      "race": "Night Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23390,
+        "itemLevel": 570,
+        "mounts": 391,
+        "quests": 3726,
+        "deaths": 1494
+      }
+    },
+    {
+      "name": "Notfriday",
+      "class": "Monk",
+      "race": "Void Elf",
+      "stats": {
+        "level": 90,
+        "achievementPoints": 20860,
+        "itemLevel": 228,
+        "mounts": 303,
+        "quests": 2344,
+        "deaths": 824
+      }
+    },
+    {
+      "name": "Topchief",
+      "class": "Warrior",
+      "race": "Dwarf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13355,
+        "itemLevel": 427,
+        "mounts": 178,
+        "quests": 700,
+        "deaths": 2
+      }
+    },
+    {
+      "name": "Notthursday",
+      "class": "Demon Hunter",
+      "race": "Night Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 20345,
+        "itemLevel": 103,
+        "mounts": 299,
+        "quests": 6589,
+        "deaths": 3772
+      }
+    },
+    {
+      "name": "Greatwizardx",
+      "class": "Druid",
+      "race": "Night Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13495,
+        "itemLevel": 87,
+        "mounts": 187,
+        "quests": 873,
+        "deaths": 115
+      }
+    },
+    {
+      "name": "Biglizard",
+      "class": "Evoker",
+      "race": "Dracthyr",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13115,
+        "itemLevel": 379,
+        "mounts": 156,
+        "quests": 422,
+        "deaths": 12
+      }
+    },
+    {
+      "name": "Dimfish",
+      "class": "Paladin",
+      "race": "Dark Iron Dwarf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13775,
+        "itemLevel": 77,
+        "mounts": 194,
+        "quests": 377,
+        "deaths": 8
+      }
+    },
+    {
+      "name": "Notcorrupted",
+      "class": "Warlock",
+      "race": "Void Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 19540,
+        "itemLevel": 424,
+        "mounts": 278,
+        "quests": 274,
+        "deaths": 19
+      }
+    },
+    {
+      "name": "Six",
+      "class": "Hunter",
+      "race": "Draenei",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 23380,
+        "itemLevel": 573,
+        "mounts": 388,
+        "quests": 1920,
+        "deaths": 604
+      }
+    },
+    {
+      "name": "Sadfish",
+      "class": "Monk",
+      "race": "Dwarf",
+      "stats": {
+        "level": 90,
+        "achievementPoints": 13875,
+        "itemLevel": 227,
+        "mounts": 196,
+        "quests": 1783,
+        "deaths": 248
+      }
+    },
+    {
+      "name": "Crackpants",
+      "class": "Warlock",
+      "race": "Draenei",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13150,
+        "itemLevel": 331,
+        "mounts": 160,
+        "quests": 389,
+        "deaths": 3
+      }
+    },
+    {
+      "name": "Redheadgf",
+      "class": "Mage",
+      "race": "Gnome",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13115,
+        "itemLevel": 420,
+        "mounts": 156,
+        "quests": 436,
+        "deaths": 3
+      }
+    },
+    {
+      "name": "Breadrobber",
+      "class": "Rogue",
+      "race": "Night Elf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13865,
+        "itemLevel": 119,
+        "mounts": 196,
+        "quests": 1013,
+        "deaths": 41
+      }
+    },
+    {
+      "name": "Shin",
+      "class": "Shaman",
+      "race": "Draenei",
+      "stats": {
+        "level": 41,
+        "achievementPoints": 23200,
+        "itemLevel": 145,
+        "mounts": 385,
+        "quests": 165,
+        "deaths": 4
+      }
+    },
+    {
+      "name": "Ophana",
+      "class": "Paladin",
+      "race": "Lightforged Draenei",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 19065,
+        "itemLevel": 681,
+        "mounts": 345,
+        "quests": 1208,
+        "deaths": 212
+      }
+    },
+    {
+      "name": "Notchief",
+      "class": "Hunter",
+      "race": "Undead",
+      "stats": {
+        "level": 31,
+        "achievementPoints": 20155,
+        "itemLevel": 116,
+        "mounts": 290,
+        "quests": 311,
+        "deaths": 1
+      }
+    },
+    {
+      "name": "Lazyknight",
+      "class": "Death Knight",
+      "race": "Dwarf",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 13810,
+        "itemLevel": 125,
+        "mounts": 196,
+        "quests": 925,
+        "deaths": 23
+      }
+    },
+    {
+      "name": "Magnus",
+      "class": "Mage",
+      "race": "Blood Elf",
+      "stats": {
+        "level": 90,
+        "achievementPoints": 6050,
+        "itemLevel": 272,
+        "mounts": 70,
+        "quests": 2447,
+        "deaths": 172
+      }
+    },
+    {
+      "name": "Betrayedyou",
+      "class": "Hunter",
+      "race": "Human",
+      "stats": {
+        "level": 80,
+        "achievementPoints": 5875,
+        "itemLevel": 87,
+        "mounts": 60,
+        "quests": 1237,
+        "deaths": 164
+      }
+    }
   ]
 }
