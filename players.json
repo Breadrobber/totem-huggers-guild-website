@@ -1,0 +1,27 @@
+{
+  "guild": "Totem Huggers",
+  "faction": "Horde",
+  "sampleData": true,
+  "updated": "2026-10-07",
+  "categories": [
+    { "key": "level",     "label": "Level",            "order": "desc" },
+    { "key": "honorKills","label": "Honorable kills",  "order": "desc" },
+    { "key": "quests",    "label": "Quests completed", "order": "desc" },
+    { "key": "dungeons",  "label": "Dungeons cleared", "order": "desc" },
+    { "key": "deaths",    "label": "Fewest deaths",    "order": "asc"  }
+  ],
+  "players": [
+    { "name": "Grakka Stonehoof",  "class": "Shaman",  "race": "Tauren",    "stats": { "level": 60, "honorKills": 1842, "quests": 612, "dungeons": 87,  "deaths": 143 } },
+    { "name": "Zul'jin Mossfang",  "class": "Hunter",  "race": "Troll",     "stats": { "level": 60, "honorKills": 2310, "quests": 588, "dungeons": 64,  "deaths": 98 } },
+    { "name": "Morga Ashgrip",     "class": "Warrior", "race": "Orc",       "stats": { "level": 60, "honorKills": 2975, "quests": 540, "dungeons": 112, "deaths": 211 } },
+    { "name": "Velric Duskmourne", "class": "Warlock", "race": "Undead",    "stats": { "level": 58, "honorKills": 1204, "quests": 497, "dungeons": 58,  "deaths": 176 } },
+    { "name": "Hakoa Windrunner",  "class": "Druid",   "race": "Tauren",    "stats": { "level": 60, "honorKills": 640,  "quests": 655, "dungeons": 95,  "deaths": 61 } },
+    { "name": "Thrak Bonesplitter","class": "Paladin", "race": "Orc",       "stats": { "level": 57, "honorKills": 980,  "quests": 461, "dungeons": 49,  "deaths": 133 } },
+    { "name": "Silka Rotwhisper",  "class": "Priest",  "race": "Undead",    "stats": { "level": 60, "honorKills": 412,  "quests": 603, "dungeons": 121, "deaths": 89 } },
+    { "name": "Jin'ra Tidecaller", "class": "Shaman",  "race": "Troll",     "stats": { "level": 54, "honorKills": 355,  "quests": 402, "dungeons": 33,  "deaths": 72 } },
+    { "name": "Ulgar Redtusk",     "class": "Rogue",   "race": "Orc",       "stats": { "level": 60, "honorKills": 3402, "quests": 521, "dungeons": 70,  "deaths": 258 } },
+    { "name": "Neska Grimbloom",   "class": "Mage",    "race": "Undead",    "stats": { "level": 59, "honorKills": 1588, "quests": 549, "dungeons": 81,  "deaths": 164 } },
+    { "name": "Tahu Plainstrider", "class": "Hunter",  "race": "Tauren",    "stats": { "level": 47, "honorKills": 120,  "quests": 318, "dungeons": 19,  "deaths": 40 } },
+    { "name": "Kezzik Sparkfuse",  "class": "Mage",    "race": "Troll",     "stats": { "level": 52, "honorKills": 276,  "quests": 377, "dungeons": 27,  "deaths": 95 } }
+  ]
+}
