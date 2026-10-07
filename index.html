@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Totem Huggers | WoW Forever</title>
+<title>Totem Huggers</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,38 +30,60 @@
     line-height: 1.6;
   }
 
-  /* The hanging war banner */
-  .banner {
-    width: min(92%, 560px);
-    margin: 0 auto;
-    padding: 3.5rem 2rem 5.5rem;
-    background: linear-gradient(180deg, var(--blood) 0%, var(--blood-deep) 100%);
-    border-left: 6px solid var(--bronze);
-    border-right: 6px solid var(--bronze);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
-    text-align: center;
-  }
-  .banner::before {
-    content: "";
+  /* Banner image */
+  .image-banner { width: min(92%, 960px); margin: 1.5rem auto 0; }
+  .image-banner h1 { margin: 0; }
+  .image-banner img {
     display: block;
-    height: 6px;
-    background: var(--bronze);
-    margin: -3.5rem -2rem 3rem;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--bronze);
+    border-radius: 3px;
   }
-  .banner h1 {
-    margin: 0;
+
+  /* Menu bar: stays at the top of the screen while scrolling */
+  .menu {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--iron);
+    border-bottom: 2px solid var(--blood);
+    margin-top: 1.5rem;
+  }
+  .menu ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: min(92%, 760px);
+    display: flex;
+    gap: 2rem;
+  }
+  .menu a {
+    display: block;
+    padding: 0.8rem 0;
     font-family: var(--display);
-    font-weight: 800;
-    font-size: clamp(2.8rem, 9vw, 4.5rem);
-    line-height: 0.95;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: var(--bone);
-    text-shadow: 0 3px 0 var(--blood-deep);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
   }
-  .banner p {
-    margin: 1rem 0 0;
-    color: #f0c9b8;
-    font-size: 1.05rem;
-  }
+  .menu a:hover, .menu a.current { color: var(--bronze); border-bottom-color: var(--bronze); }
+  a:focus-visible { outline: 3px solid var(--bronze); outline-offset: 2px; }
+
+  section { scroll-margin-top: 4.5rem; margin-bottom: 4rem; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* Roster, grouped by class */
+  .roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+  .class-group { background: var(--iron-raised); border-top: 3px solid; border-radius: 3px; padding: 0.9rem 1rem 1rem; }
+  .class-group h3 { margin: 0 0 0.5rem; font-size: 1.15rem; display: flex; justify-content: space-between; }
+  .class-group h3 span { color: var(--ash); font-weight: 400; }
+  .class-group ul { list-style: none; margin: 0; padding: 0; }
+  .class-group li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.2rem 0; font-size: 1rem; }
+  .class-group li span { color: var(--ash); white-space: nowrap; }
 
   main { width: min(92%, 760px); margin: 2.5rem auto 4rem; }
 
@@ -136,30 +158,28 @@
 
   @media (max-width: 520px) {
     td, th { padding-left: 0.6rem; padding-right: 0.6rem; }
-    .banner { padding-bottom: 4.5rem; }
-  }
-  .image-banner { width: 100%; margin: 0; }
-  .image-banner h1 { margin: 0; }
-  .image-banner img {
-    display: block;
-    width: 100%;
-    height: clamp(120px, 18vw, 240px);
-    object-fit: cover;
-    object-position: center;
-    border-bottom: 3px solid var(--bronze);
+    .menu ul { gap: 1.25rem; }
   }
 </style>
 </head>
 <body>
-   <header class="image-banner">
+  <header class="image-banner">
     <h1><img src="images/banner.png" alt="Totem Huggers"></h1>
   </header>
+
+  <nav class="menu" aria-label="Main menu">
+    <ul>
+      <li><a href="#leaderboard">Leaderboard</a></li>
+      <li><a href="#roster">Roster</a></li>
+    </ul>
+  </nav>
 
   <main>
     <div class="notice" id="notice" hidden>
       <strong>Sample data.</strong> These are made-up players so we can test the page. Real guild stats arrive after WoW: Forever launches on November 4.
     </div>
 
+    <section id="leaderboard">
     <div class="tabs" id="tabs" role="group" aria-label="Choose a leaderboard"></div>
     <h2 id="board-title">Loading…</h2>
     <div class="table-wrap">
@@ -168,6 +188,13 @@
         <tbody id="rows"></tbody>
       </table>
     </div>
+    </section>
+
+    <section id="roster">
+      <h2>Roster</h2>
+      <p id="roster-count" class="meta"></p>
+      <div class="roster" id="roster-list"></div>
+    </section>
   </main>
 
   <footer id="updated"></footer>
@@ -175,7 +202,8 @@
 <script>
   const CLASS_COLORS = {
     Warrior: "#c69b6d", Paladin: "#f48cba", Hunter: "#aad372", Rogue: "#fff468",
-    Priest: "#ffffff", Shaman: "#4a9eff", Mage: "#3fc7eb", Warlock: "#9fa0f5", Druid: "#ff7c0a"
+    Priest: "#ffffff", Shaman: "#4a9eff", Mage: "#3fc7eb", Warlock: "#9fa0f5", Druid: "#ff7c0a",
+    "Death Knight": "#e0435a", "Demon Hunter": "#c26fe0", Monk: "#00ff98", Evoker: "#4fc2a8"
   };
 
   let data;
@@ -187,7 +215,8 @@
     document.getElementById("board-title").textContent = category.label;
     document.getElementById("value-heading").textContent = category.order === "asc" ? "Deaths" : category.label;
 
-    const sorted = [...data.players].sort((a, b) =>
+    // Leave out anyone Blizzard had no number for in this category
+    const sorted = data.players.filter(p => typeof p.stats[category.key] === "number").sort((a, b) =>
       category.order === "asc"
         ? a.stats[category.key] - b.stats[category.key]
         : b.stats[category.key] - a.stats[category.key]
@@ -213,6 +242,47 @@
     });
   }
 
+  function showRoster() {
+    const byClass = {};
+    data.players.forEach(p => (byClass[p.class] ||= []).push(p));
+    document.getElementById("roster-count").textContent =
+      `${data.players.length} members`;
+    const list = document.getElementById("roster-list");
+    Object.keys(byClass).sort().forEach(cls => {
+      const members = byClass[cls].sort((a, b) => b.stats.level - a.stats.level);
+      const box = document.createElement("div");
+      box.className = "class-group";
+      box.style.borderTopColor = CLASS_COLORS[cls] || "var(--bronze)";
+      box.innerHTML = `<h3></h3><ul></ul>`;
+      const h3 = box.querySelector("h3");
+      h3.textContent = cls;
+      h3.style.color = CLASS_COLORS[cls] || "inherit";
+      const count = document.createElement("span");
+      count.textContent = members.length;
+      h3.appendChild(count);
+      members.forEach(p => {
+        const li = document.createElement("li");
+        li.textContent = p.name;
+        const lvl = document.createElement("span");
+        lvl.textContent = `Lv ${p.stats.level}`;
+        li.appendChild(lvl);
+        box.querySelector("ul").appendChild(li);
+      });
+      list.appendChild(box);
+    });
+  }
+
+  // Underline the menu item for whichever section is on screen
+  const menuLinks = document.querySelectorAll(".menu a");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        menuLinks.forEach(a => a.classList.toggle("current", a.hash === "#" + e.target.id));
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  document.querySelectorAll("main section").forEach(s => observer.observe(s));
+
   fetch("players.json")
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(json => {
@@ -228,6 +298,7 @@
         tabs.appendChild(btn);
       });
       showBoard(data.categories[0]);
+      showRoster();
     })
     .catch(() => {
       document.getElementById("board-title").textContent = "The leaderboard couldn't load";
