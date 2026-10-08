@@ -1,9 +1,4 @@
 // Totem Huggers data collector
-// Pulls the guild roster from the Blizzard API, gathers each member's stats,
-// and writes them to players.json for the website to display.
-//
-// Run locally:   node --env-file=.env collector/collect.js
-// On GitHub:     runs automatically from .github/workflows/update-stats.yml
 
 const fs = require("fs");
 const path = require("path");
@@ -11,8 +6,8 @@ const path = require("path");
 // ---------- Settings: change these to match your guild ----------
 const REGION = "us";                 // "us" or "eu"
 const REALM = "sargeras";     // exactly as it appears in game, e.g. "Area 52"
-const GUILD = "not-clan";     // exactly as it appears in game
-const MIN_LEVEL = 10;                // skip characters below this level (filters out bank alts)
+const GUILD = "not-clan";     // exactly as it appears in game, use hyphen for spaces
+const MIN_LEVEL = 10;                // min level
 // ------------------------------------------------------------------
 
 const CLIENT_ID = process.env.BLIZZARD_CLIENT_ID;
@@ -21,20 +16,22 @@ const API = `https://${REGION}.api.blizzard.com`;
 const NAMESPACE = `profile-${REGION}`;
 const OUTPUT = path.join(__dirname, "..", "players.json");
 
-// The leaderboards shown on the site. "order: asc" means lower is better.
+// ---------- Leaderboard tabs ----------
+// Each line is one tab on the site, in this order.
+//   key:    a short unique id, letters only, no spaces
+//   label:  the tab's name on the site
+//   column: (optional) the column heading, if it should differ from the label
+//   order:  "desc" = highest wins, "asc" = lowest wins
+//   stat:   the statistic's name EXACTLY as it appears in stats-list.txt
+// The first three tabs come from other parts of the API, so they have no "stat".
 const CATEGORIES = [
   { key: "achievementPoints", label: "Achievement points", order: "desc" },
   { key: "itemLevel",         label: "Item level",         order: "desc" },
   { key: "mounts",            label: "Mounts collected",   order: "desc" },
-  { key: "quests",            label: "Quests completed",   order: "desc" },
-  { key: "deaths",            label: "Fewest deaths",      order: "asc"  },
+  { key: "quests",            label: "Quests completed",   order: "desc", stat: "Quests completed" },
+  { key: "deaths",            label: "Fewest deaths",      order: "asc",  stat: "Total deaths", column: "Deaths" },
 ];
-
-// Statistic names exactly as Blizzard lists them in the Statistics tab.
-const STAT_NAMES = {
-  quests: "Quests completed",
-  deaths: "Total deaths",
-};
+// ----------------------------------------
 
 const slug = s => s.trim().toLowerCase().replace(/'/g, "").replace(/\s+/g, "-");
 
@@ -88,7 +85,7 @@ async function collectMember(token, member) {
   ]);
   if (!profile) return null;
 
-  return {
+  const player = {
     name: profile.name,
     class: profile.character_class?.name ?? "Unknown",
     race: profile.race?.name ?? "",
@@ -97,10 +94,13 @@ async function collectMember(token, member) {
       achievementPoints: profile.achievement_points ?? null,
       itemLevel: profile.equipped_item_level ?? null,
       mounts: mounts?.mounts?.length ?? null,
-      quests: findStat(stats, STAT_NAMES.quests),
-      deaths: findStat(stats, STAT_NAMES.deaths),
     },
   };
+  // Fill in every tab that uses a statistic from the Statistics list
+  for (const cat of CATEGORIES) {
+    if (cat.stat) player.stats[cat.key] = findStat(stats, cat.stat);
+  }
+  return player;
 }
 
 async function main() {
@@ -122,6 +122,12 @@ async function main() {
       collectMember(token, m).catch(err => { console.warn(`Skipped ${m.character.name}: ${err.message}`); return null; })
     ));
     batch.forEach(p => p && players.push(p));
+  }
+
+  for (const cat of CATEGORIES) {
+    if (cat.stat && !players.some(p => typeof p.stats[cat.key] === "number")) {
+      console.warn(`No one had a value for "${cat.stat}". Check the spelling against stats-list.txt.`);
+    }
   }
 
   const output = {
