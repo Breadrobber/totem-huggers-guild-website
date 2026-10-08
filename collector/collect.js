@@ -33,6 +33,9 @@ const CATEGORIES = [
   { key: "cheers",            label: "Total cheers",       order: "desc", stat: "Total cheers" },
   { key: "bgWins",            label: "Battleground wins",  order: "desc", stat: "Battlegrounds won" },
   { key: "falling",           label: "Falling Deaths",     order: "desc", stat: "Deaths from falling" },
+  { key: "flightPath",        label: "Flight Paths taken", order: "desc", stat: "Flight paths taken" },
+  { key: "baronKills",        label: "Baron kills",        order: "desc", stat: "Rivendare kills (Stratholme)" },
+  { key: "heroicLKkills",     label: "Lich King Kills",    order: "desc", stat: "Victories over the Lich King (Heroic Icecrown 25 player)" },
   { key: "deaths",            label: "Fewest deaths",      order: "asc",  stat: "Total deaths", column: "Deaths" },
 ];
 // ----------------------------------------
