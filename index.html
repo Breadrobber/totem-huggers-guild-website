@@ -220,8 +220,7 @@
   const CLASS_ICONS = {
     Warrior: "warrior.png", Paladin: "paladin.png", Hunter: "hunter.png",
     Rogue: "rogue.png", Priest: "priest.png", Shaman: "shaman.png",
-    Mage: "mage.png", Warlock: "warlock.png", Druid: "druid.png",
-    Monk: "monk.png", "Death Knight": "deathknight.png"
+    Mage: "mage.png", Warlock: "warlock.png", Druid: "druid.png"
   };
 
   let data;
@@ -231,7 +230,7 @@
       b.setAttribute("aria-pressed", b.dataset.key === category.key ? "true" : "false");
     });
     document.getElementById("board-title").textContent = category.label;
-    document.getElementById("value-heading").textContent = category.order === "asc" ? "Deaths" : category.label;
+    document.getElementById("value-heading").textContent = category.column || category.label;
 
     // Leave out anyone Blizzard had no number for in this category
     const sorted = data.players.filter(p => typeof p.stats[category.key] === "number").sort((a, b) =>
