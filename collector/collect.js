@@ -27,7 +27,7 @@ const OUTPUT = path.join(__dirname, "..", "players.json");
 const CATEGORIES = [
   { key: "achievementPoints", label: "Achievement points", order: "desc" },
   { key: "itemLevel",         label: "Item level",         order: "desc" },
-  { key: "mounts",            label: "Mounts collected",   order: "desc" },
+  { key: "falling",            label: "Falling Deaths",   order: "desc", stat: "Deaths from falling" },
   { key: "quests",            label: "Quests completed",   order: "desc", stat: "Quests completed" },
   { key: "deaths",            label: "Fewest deaths",      order: "asc",  stat: "Total deaths", column: "Deaths" },
 ];
