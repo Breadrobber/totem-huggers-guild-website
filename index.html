@@ -108,6 +108,8 @@
   .class-group ul { list-style: none; margin: 0; padding: 0 1rem 1rem; }
   .class-group li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.2rem 0; font-size: 1rem; }
   .class-group li span { color: var(--ash); white-space: nowrap; }
+  .class-group li a { font-weight: 700; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  .class-group li a:hover { border-bottom-style: solid; }
 
   main { width: min(92%, 760px); margin: 2.5rem auto 4rem; }
 
@@ -306,10 +308,10 @@
   const ARMORY_REGION = "us";       // "eu" for EU realms
   const ARMORY_LOCALE = "en-us";    // "en-gb" for EU
 
-  function armoryLink(p, span) {
+  function armoryLink(p, span, className = "player") {
     if (!p.realm) { span.textContent = p.name; return span; }
     const a = document.createElement("a");
-    a.className = "player";
+    a.className = className;
     a.href = `https://worldofwarcraft.blizzard.com/${ARMORY_LOCALE}/character/${ARMORY_REGION}/${p.realm}/${encodeURIComponent(p.name.toLowerCase())}`;
     a.target = "_blank";
     a.rel = "noopener";
@@ -413,7 +415,9 @@
       });
       members.forEach(p => {
         const li = document.createElement("li");
-        li.textContent = p.name;
+        const nameSpan = document.createElement("span");
+        li.appendChild(nameSpan);
+        armoryLink(p, nameSpan, "roster-name").style.color = CLASS_COLORS[p.class] || "inherit";
         const lvl = document.createElement("span");
         lvl.textContent = `Lv ${p.stats.level}`;
         li.appendChild(lvl);
