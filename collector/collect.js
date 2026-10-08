@@ -93,6 +93,7 @@ async function collectMember(token, member) {
     name: profile.name,
     class: profile.character_class?.name ?? "Unknown",
     race: profile.race?.name ?? "",
+    gender: profile.gender?.type ?? "",
     stats: {
       level: profile.level,
       achievementPoints: profile.achievement_points ?? null,
