@@ -121,6 +121,24 @@
   }
   .notice strong { color: var(--bone); }
 
+  /* Search boxes */
+  .search {
+    width: 100%;
+    max-width: 22rem;
+    font: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1.25rem;
+    background: var(--iron-raised);
+    color: var(--bone);
+    border: 1px solid #5a4636;
+    border-radius: 3px;
+  }
+  .search::placeholder { color: var(--ash); }
+  .search:hover { border-color: var(--bronze); }
+  .search:focus-visible { outline: 3px solid var(--bronze); outline-offset: 2px; }
+  .no-match { color: var(--ash); font-size: 1rem; }
+
   /* Category switcher */
   .tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
   .tabs button {
@@ -223,11 +241,13 @@
 
     <section id="leaderboard">
     <div class="tabs" id="tabs" role="group" aria-label="Choose a leaderboard"></div>
+    <input type="search" id="board-search" class="search" placeholder="Search players…" aria-label="Search leaderboard players by name">
     <h2 id="board-title">Loading…</h2>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Rank</th><th class="class-col">Race</th><th class="class-col">Class</th><th>Player</th><th id="value-heading"></th></tr></thead>
         <tbody id="rows"></tbody>
+        <tfoot id="rows-no-match" hidden><tr><td colspan="5" class="no-match">No players match that name.</td></tr></tfoot>
       </table>
     </div>
     </section>
@@ -235,6 +255,8 @@
     <section id="roster">
       <h2>Roster</h2>
       <p id="roster-count" class="meta"></p>
+      <input type="search" id="roster-search" class="search" placeholder="Search players…" aria-label="Search roster players by name">
+      <p class="no-match" id="roster-no-match" hidden>No players match that name.</p>
       <div class="roster" id="roster-list"></div>
     </section>
   </main>
@@ -308,8 +330,10 @@
   }
 
   let data;
+  let currentCategory = null;
 
   function showBoard(category) {
+    currentCategory = category;
     document.querySelectorAll("#tabs button").forEach(b => {
       b.setAttribute("aria-pressed", b.dataset.key === category.key ? "true" : "false");
     });
@@ -325,10 +349,15 @@
 
     const rows = document.getElementById("rows");
     rows.innerHTML = "";
+    const search = document.getElementById("board-search").value.trim().toLowerCase();
+    let shown = 0;
     let rank = 0, lastValue = null;
     sorted.forEach((p, i) => {
       const value = p.stats[category.key];
       if (value !== lastValue) { rank = i + 1; lastValue = value; } // tied players share a rank
+      // Ranks are worked out before filtering, so a searched player keeps their real rank
+      if (search && !p.name.toLowerCase().includes(search)) return;
+      shown++;
       const tr = document.createElement("tr");
       if (rank <= 3) tr.className = "top r" + rank;
       tr.innerHTML = `
@@ -342,27 +371,36 @@
       tr.querySelector(".meta").textContent = `${p.race} ${p.class}`;
       rows.appendChild(tr);
     });
+    document.getElementById("rows-no-match").hidden = shown > 0;
   }
 
   function showRoster() {
+    const search = document.getElementById("roster-search").value.trim().toLowerCase();
+    const matches = search
+      ? data.players.filter(p => p.name.toLowerCase().includes(search))
+      : data.players;
     const byClass = {};
-    data.players.forEach(p => (byClass[p.class] ||= []).push(p));
-    document.getElementById("roster-count").textContent =
-      `${data.players.length} members`;
+    matches.forEach(p => (byClass[p.class] ||= []).push(p));
+    document.getElementById("roster-count").textContent = search
+      ? `${matches.length} of ${data.players.length} members`
+      : `${data.players.length} members`;
+    document.getElementById("roster-no-match").hidden = matches.length > 0;
     const list = document.getElementById("roster-list");
+    list.innerHTML = "";
     Object.keys(byClass).sort().forEach(cls => {
       const members = byClass[cls].sort((a, b) => b.stats.level - a.stats.level);
       const box = document.createElement("div");
       box.className = "class-group";
       box.style.borderTopColor = CLASS_COLORS[cls] || "var(--bronze)";
       const listId = "roster-" + cls.replace(/\s+/g, "-").toLowerCase();
+      const startOpen = search.length > 0;
       box.innerHTML = `
-        <h3><button class="class-toggle" aria-expanded="false" aria-controls="${listId}">
+        <h3><button class="class-toggle" aria-expanded="${startOpen}" aria-controls="${listId}">
           <span class="arrow" aria-hidden="true">▶</span>
           <span class="name"></span>
           <span class="count"></span>
         </button></h3>
-        <ul id="${listId}" hidden></ul>`;
+        <ul id="${listId}" ${startOpen ? "" : "hidden"}></ul>`;
       const toggle = box.querySelector(".class-toggle");
       toggle.style.color = CLASS_COLORS[cls] || "inherit";
       toggle.querySelector(".name").textContent = cls;
@@ -412,6 +450,8 @@
       });
       showBoard(data.categories[0]);
       showRoster();
+      document.getElementById("board-search").addEventListener("input", () => showBoard(currentCategory));
+      document.getElementById("roster-search").addEventListener("input", showRoster);
     })
     .catch(() => {
       document.getElementById("board-title").textContent = "The leaderboard couldn't load";
