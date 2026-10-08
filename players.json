@@ -22,12 +22,15 @@
     {
       "key": "quests",
       "label": "Quests completed",
-      "order": "desc"
+      "order": "desc",
+      "stat": "Quests completed"
     },
     {
       "key": "deaths",
       "label": "Fewest deaths",
-      "order": "asc"
+      "order": "asc",
+      "stat": "Total deaths",
+      "column": "Deaths"
     }
   ],
   "players": [
@@ -376,9 +379,9 @@
       "stats": {
         "level": 90,
         "achievementPoints": 6050,
-        "itemLevel": 272,
+        "itemLevel": 276,
         "mounts": 70,
-        "quests": 2447,
+        "quests": 2401,
         "deaths": 172
       }
     },
