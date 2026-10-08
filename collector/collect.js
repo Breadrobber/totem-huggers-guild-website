@@ -85,10 +85,11 @@ async function collectMember(token, member) {
   const name = encodeURIComponent(member.character.name.toLowerCase());
   const base = `/profile/wow/character/${realm}/${name}`;
 
-  const [profile, stats, mounts] = await Promise.all([
+  const [profile, stats, mounts, media] = await Promise.all([
     api(token, base),
     api(token, `${base}/achievements/statistics`),
     api(token, `${base}/collections/mounts`),
+    api(token, `${base}/character-media`),
   ]);
   if (!profile) return null;
 
@@ -97,6 +98,8 @@ async function collectMember(token, member) {
     class: profile.character_class?.name ?? "Unknown",
     race: profile.race?.name ?? "",
     gender: profile.gender?.type ?? "",
+    realm: profile.realm?.slug ?? realm,  // used to build the Armory link
+    avatar: media?.assets?.find(a => a.key === "avatar")?.value ?? null,
     stats: {
       level: profile.level,
       achievementPoints: profile.achievement_points ?? null,
