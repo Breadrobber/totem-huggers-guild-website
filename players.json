@@ -40,6 +40,24 @@
       "stat": "Deaths from falling"
     },
     {
+      "key": "flightPath",
+      "label": "Flight Paths taken",
+      "order": "desc",
+      "stat": "Flight paths taken"
+    },
+    {
+      "key": "baronKills",
+      "label": "Baron kills",
+      "order": "desc",
+      "stat": "Rivendare kills (Stratholme)"
+    },
+    {
+      "key": "heroicLKkills",
+      "label": "Lich King Kills",
+      "order": "desc",
+      "stat": "Victories over the Lich King (Heroic Icecrown 25 player)"
+    },
+    {
       "key": "deaths",
       "label": "Fewest deaths",
       "order": "asc",
@@ -63,6 +81,9 @@
         "cheers": 111,
         "bgWins": 92,
         "falling": 26,
+        "flightPath": 723,
+        "baronKills": 3,
+        "heroicLKkills": 2,
         "deaths": 2260
       }
     },
@@ -81,6 +102,9 @@
         "cheers": 22,
         "bgWins": 2,
         "falling": 34,
+        "flightPath": 102,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 356
       }
     },
@@ -99,6 +123,9 @@
         "cheers": 103,
         "bgWins": 109,
         "falling": 23,
+        "flightPath": 377,
+        "baronKills": null,
+        "heroicLKkills": 4,
         "deaths": 997
       }
     },
@@ -117,6 +144,9 @@
         "cheers": 45,
         "bgWins": 41,
         "falling": 24,
+        "flightPath": 263,
+        "baronKills": null,
+        "heroicLKkills": 1,
         "deaths": 675
       }
     },
@@ -135,6 +165,9 @@
         "cheers": 98,
         "bgWins": 58,
         "falling": 21,
+        "flightPath": 102,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 602
       }
     },
@@ -153,6 +186,9 @@
         "cheers": 33,
         "bgWins": 22,
         "falling": 2,
+        "flightPath": 29,
+        "baronKills": 1,
+        "heroicLKkills": null,
         "deaths": 190
       }
     },
@@ -171,6 +207,9 @@
         "cheers": 45,
         "bgWins": 85,
         "falling": 34,
+        "flightPath": 68,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 820
       }
     },
@@ -189,6 +228,9 @@
         "cheers": 182,
         "bgWins": 120,
         "falling": 333,
+        "flightPath": 1571,
+        "baronKills": 4,
+        "heroicLKkills": 2,
         "deaths": 4556
       }
     },
@@ -207,6 +249,9 @@
         "cheers": 40,
         "bgWins": 51,
         "falling": 40,
+        "flightPath": 235,
+        "baronKills": null,
+        "heroicLKkills": 1,
         "deaths": 588
       }
     },
@@ -225,6 +270,9 @@
         "cheers": 93,
         "bgWins": 73,
         "falling": 59,
+        "flightPath": 602,
+        "baronKills": null,
+        "heroicLKkills": 1,
         "deaths": 1494
       }
     },
@@ -243,6 +291,9 @@
         "cheers": 85,
         "bgWins": 38,
         "falling": 51,
+        "flightPath": 232,
+        "baronKills": 9,
+        "heroicLKkills": 6,
         "deaths": 824
       }
     },
@@ -261,6 +312,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": 35,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 2
       }
     },
@@ -279,6 +333,9 @@
         "cheers": 244,
         "bgWins": 70,
         "falling": 187,
+        "flightPath": 1981,
+        "baronKills": 8,
+        "heroicLKkills": 18,
         "deaths": 3772
       }
     },
@@ -297,6 +354,9 @@
         "cheers": 4,
         "bgWins": null,
         "falling": 3,
+        "flightPath": 45,
+        "baronKills": 3,
+        "heroicLKkills": 1,
         "deaths": 115
       }
     },
@@ -315,6 +375,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": null,
+        "baronKills": 3,
+        "heroicLKkills": null,
         "deaths": 12
       }
     },
@@ -333,6 +396,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": 5,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 8
       }
     },
@@ -351,6 +417,9 @@
         "cheers": 2,
         "bgWins": null,
         "falling": 1,
+        "flightPath": 4,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 19
       }
     },
@@ -369,6 +438,9 @@
         "cheers": 71,
         "bgWins": 106,
         "falling": 23,
+        "flightPath": 246,
+        "baronKills": null,
+        "heroicLKkills": 2,
         "deaths": 604
       }
     },
@@ -387,6 +459,9 @@
         "cheers": 9,
         "bgWins": 57,
         "falling": 14,
+        "flightPath": 82,
+        "baronKills": 5,
+        "heroicLKkills": 7,
         "deaths": 248
       }
     },
@@ -405,6 +480,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": 3,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 3
       }
     },
@@ -423,6 +501,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": 3,
+        "baronKills": 1,
+        "heroicLKkills": null,
         "deaths": 3
       }
     },
@@ -441,6 +522,9 @@
         "cheers": 2,
         "bgWins": 4,
         "falling": 4,
+        "flightPath": 4,
+        "baronKills": 2,
+        "heroicLKkills": 1,
         "deaths": 41
       }
     },
@@ -459,6 +543,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": null,
+        "flightPath": 1,
+        "baronKills": 1,
+        "heroicLKkills": null,
         "deaths": 4
       }
     },
@@ -477,6 +564,9 @@
         "cheers": null,
         "bgWins": null,
         "falling": 30,
+        "flightPath": 106,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 212
       }
     },
@@ -495,6 +585,9 @@
         "cheers": 1,
         "bgWins": null,
         "falling": null,
+        "flightPath": 3,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 1
       }
     },
@@ -513,6 +606,9 @@
         "cheers": null,
         "bgWins": 1,
         "falling": 3,
+        "flightPath": 4,
+        "baronKills": 1,
+        "heroicLKkills": 2,
         "deaths": 23
       }
     },
@@ -531,6 +627,9 @@
         "cheers": 1,
         "bgWins": null,
         "falling": 4,
+        "flightPath": 30,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 172
       }
     },
@@ -549,6 +648,9 @@
         "cheers": 1,
         "bgWins": null,
         "falling": 17,
+        "flightPath": 167,
+        "baronKills": null,
+        "heroicLKkills": null,
         "deaths": 164
       }
     }
