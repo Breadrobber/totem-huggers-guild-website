@@ -71,6 +71,8 @@
       "class": "Priest",
       "race": "Human",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/183/118462135-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 20170,
@@ -92,6 +94,8 @@
       "class": "Druid",
       "race": "Night Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/150/119859350-avatar.jpg",
       "stats": {
         "level": 77,
         "achievementPoints": 19540,
@@ -113,6 +117,8 @@
       "class": "Paladin",
       "race": "Lightforged Draenei",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/55/138235191-avatar.jpg",
       "stats": {
         "level": 64,
         "achievementPoints": 22980,
@@ -134,6 +140,8 @@
       "class": "Death Knight",
       "race": "Void Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/107/142765675-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -155,6 +163,8 @@
       "class": "Monk",
       "race": "Void Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/92/143390556-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -176,6 +186,8 @@
       "class": "Mage",
       "race": "Human",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/114/143772786-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -197,6 +209,8 @@
       "class": "Warrior",
       "race": "Dracthyr",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/232/144183016-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -218,6 +232,8 @@
       "class": "Hunter",
       "race": "Human",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/52/160698420-avatar.jpg",
       "stats": {
         "level": 90,
         "achievementPoints": 20755,
@@ -239,6 +255,8 @@
       "class": "Hunter",
       "race": "Void Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/6/162227462-avatar.jpg",
       "stats": {
         "level": 60,
         "achievementPoints": 23190,
@@ -260,6 +278,8 @@
       "class": "Rogue",
       "race": "Night Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/111/163860847-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -281,6 +301,8 @@
       "class": "Monk",
       "race": "Void Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/219/168269787-avatar.jpg",
       "stats": {
         "level": 90,
         "achievementPoints": 20860,
@@ -302,6 +324,8 @@
       "class": "Warrior",
       "race": "Dwarf",
       "gender": "MALE",
+      "realm": "korgath",
+      "avatar": "https://render.worldofwarcraft.com/us/character/korgath/69/182015301-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13355,
@@ -323,6 +347,8 @@
       "class": "Demon Hunter",
       "race": "Night Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/36/186177316-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 20345,
@@ -344,6 +370,8 @@
       "class": "Druid",
       "race": "Night Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/41/199502121-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13495,
@@ -365,6 +393,8 @@
       "class": "Evoker",
       "race": "Dracthyr",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/160/199515296-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13115,
@@ -386,6 +416,8 @@
       "class": "Paladin",
       "race": "Dark Iron Dwarf",
       "gender": "MALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/96/199528544-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13775,
@@ -407,6 +439,8 @@
       "class": "Warlock",
       "race": "Void Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/44/199591724-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 19540,
@@ -428,6 +462,8 @@
       "class": "Hunter",
       "race": "Draenei",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/215/199902167-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 23380,
@@ -449,6 +485,8 @@
       "class": "Monk",
       "race": "Dwarf",
       "gender": "MALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/244/200094452-avatar.jpg",
       "stats": {
         "level": 90,
         "achievementPoints": 13875,
@@ -470,6 +508,8 @@
       "class": "Warlock",
       "race": "Draenei",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/67/200181571-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13150,
@@ -491,6 +531,8 @@
       "class": "Mage",
       "race": "Gnome",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/123/200181883-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13115,
@@ -512,6 +554,8 @@
       "class": "Rogue",
       "race": "Night Elf",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/163/200181923-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13865,
@@ -533,6 +577,8 @@
       "class": "Shaman",
       "race": "Draenei",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/59/200284731-avatar.jpg",
       "stats": {
         "level": 41,
         "achievementPoints": 23200,
@@ -554,6 +600,8 @@
       "class": "Paladin",
       "race": "Lightforged Draenei",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/199/201816007-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 19065,
@@ -575,6 +623,8 @@
       "class": "Hunter",
       "race": "Undead",
       "gender": "FEMALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/7/202335751-avatar.jpg",
       "stats": {
         "level": 31,
         "achievementPoints": 20155,
@@ -596,6 +646,8 @@
       "class": "Death Knight",
       "race": "Dwarf",
       "gender": "MALE",
+      "realm": "sargeras",
+      "avatar": "https://render.worldofwarcraft.com/us/character/sargeras/226/202393314-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 13810,
@@ -617,6 +669,8 @@
       "class": "Mage",
       "race": "Blood Elf",
       "gender": "MALE",
+      "realm": "boulderfist",
+      "avatar": "https://render.worldofwarcraft.com/us/character/boulderfist/149/224738965-avatar.jpg",
       "stats": {
         "level": 90,
         "achievementPoints": 6050,
@@ -638,6 +692,8 @@
       "class": "Hunter",
       "race": "Human",
       "gender": "MALE",
+      "realm": "boulderfist",
+      "avatar": "https://render.worldofwarcraft.com/us/character/boulderfist/86/232851542-avatar.jpg",
       "stats": {
         "level": 80,
         "achievementPoints": 5875,
