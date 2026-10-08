@@ -5,26 +5,39 @@
   "updated": "2026-10-08",
   "categories": [
     {
-      "key": "achievementPoints",
-      "label": "Achievement points",
-      "order": "desc"
-    },
-    {
       "key": "itemLevel",
       "label": "Item level",
       "order": "desc"
-    },
-    {
-      "key": "falling",
-      "label": "Falling Deaths",
-      "order": "desc",
-      "stat": "Deaths from falling"
     },
     {
       "key": "quests",
       "label": "Quests completed",
       "order": "desc",
       "stat": "Quests completed"
+    },
+    {
+      "key": "LOL'd",
+      "label": "Times LOL'd",
+      "order": "desc",
+      "stat": "Total times LOL'd"
+    },
+    {
+      "key": "cheers",
+      "label": "Total cheers",
+      "order": "desc",
+      "stat": "Total cheers"
+    },
+    {
+      "key": "bgWins",
+      "label": "Battleground wins",
+      "order": "desc",
+      "stat": "Battlegrounds won"
+    },
+    {
+      "key": "falling",
+      "label": "Falling Deaths",
+      "order": "desc",
+      "stat": "Deaths from falling"
     },
     {
       "key": "deaths",
@@ -44,8 +57,11 @@
         "achievementPoints": 20170,
         "itemLevel": 594,
         "mounts": 285,
-        "falling": 26,
         "quests": 3056,
+        "LOL'd": 204,
+        "cheers": 111,
+        "bgWins": 92,
+        "falling": 26,
         "deaths": 2260
       }
     },
@@ -58,8 +74,11 @@
         "achievementPoints": 19540,
         "itemLevel": 353,
         "mounts": 278,
-        "falling": 34,
         "quests": 1462,
+        "LOL'd": 13,
+        "cheers": 22,
+        "bgWins": 2,
+        "falling": 34,
         "deaths": 356
       }
     },
@@ -72,8 +91,11 @@
         "achievementPoints": 22980,
         "itemLevel": 278,
         "mounts": 384,
-        "falling": 23,
         "quests": 3563,
+        "LOL'd": 54,
+        "cheers": 103,
+        "bgWins": 109,
+        "falling": 23,
         "deaths": 997
       }
     },
@@ -86,8 +108,11 @@
         "achievementPoints": 23390,
         "itemLevel": 566,
         "mounts": 392,
-        "falling": 24,
         "quests": 2062,
+        "LOL'd": 26,
+        "cheers": 45,
+        "bgWins": 41,
+        "falling": 24,
         "deaths": 675
       }
     },
@@ -100,8 +125,11 @@
         "achievementPoints": 23390,
         "itemLevel": 611,
         "mounts": 391,
-        "falling": 21,
         "quests": 1699,
+        "LOL'd": 43,
+        "cheers": 98,
+        "bgWins": 58,
+        "falling": 21,
         "deaths": 602
       }
     },
@@ -114,8 +142,11 @@
         "achievementPoints": 23390,
         "itemLevel": 610,
         "mounts": 391,
-        "falling": 2,
         "quests": 1511,
+        "LOL'd": 9,
+        "cheers": 33,
+        "bgWins": 22,
+        "falling": 2,
         "deaths": 190
       }
     },
@@ -128,8 +159,11 @@
         "achievementPoints": 23390,
         "itemLevel": 570,
         "mounts": 391,
-        "falling": 34,
         "quests": 1954,
+        "LOL'd": 36,
+        "cheers": 45,
+        "bgWins": 85,
+        "falling": 34,
         "deaths": 820
       }
     },
@@ -142,8 +176,11 @@
         "achievementPoints": 20755,
         "itemLevel": 217,
         "mounts": 302,
-        "falling": 333,
         "quests": 4911,
+        "LOL'd": 576,
+        "cheers": 182,
+        "bgWins": 120,
+        "falling": 333,
         "deaths": 4556
       }
     },
@@ -156,8 +193,11 @@
         "achievementPoints": 23190,
         "itemLevel": 204,
         "mounts": 385,
-        "falling": 40,
         "quests": 2895,
+        "LOL'd": 35,
+        "cheers": 40,
+        "bgWins": 51,
+        "falling": 40,
         "deaths": 588
       }
     },
@@ -170,8 +210,11 @@
         "achievementPoints": 23390,
         "itemLevel": 570,
         "mounts": 391,
-        "falling": 59,
         "quests": 3726,
+        "LOL'd": 156,
+        "cheers": 93,
+        "bgWins": 73,
+        "falling": 59,
         "deaths": 1494
       }
     },
@@ -184,8 +227,11 @@
         "achievementPoints": 20860,
         "itemLevel": 228,
         "mounts": 303,
-        "falling": 51,
         "quests": 2344,
+        "LOL'd": 9,
+        "cheers": 85,
+        "bgWins": 38,
+        "falling": 51,
         "deaths": 824
       }
     },
@@ -198,8 +244,11 @@
         "achievementPoints": 13355,
         "itemLevel": 427,
         "mounts": 178,
-        "falling": null,
         "quests": 700,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 2
       }
     },
@@ -212,8 +261,11 @@
         "achievementPoints": 20345,
         "itemLevel": 103,
         "mounts": 299,
-        "falling": 187,
         "quests": 6589,
+        "LOL'd": 244,
+        "cheers": 244,
+        "bgWins": 70,
+        "falling": 187,
         "deaths": 3772
       }
     },
@@ -226,8 +278,11 @@
         "achievementPoints": 13495,
         "itemLevel": 87,
         "mounts": 187,
-        "falling": 3,
         "quests": 873,
+        "LOL'd": 7,
+        "cheers": 4,
+        "bgWins": null,
+        "falling": 3,
         "deaths": 115
       }
     },
@@ -240,8 +295,11 @@
         "achievementPoints": 13115,
         "itemLevel": 379,
         "mounts": 156,
-        "falling": null,
         "quests": 422,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 12
       }
     },
@@ -254,8 +312,11 @@
         "achievementPoints": 13775,
         "itemLevel": 77,
         "mounts": 194,
-        "falling": null,
         "quests": 377,
+        "LOL'd": 1,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 8
       }
     },
@@ -268,8 +329,11 @@
         "achievementPoints": 19540,
         "itemLevel": 424,
         "mounts": 278,
-        "falling": 1,
         "quests": 274,
+        "LOL'd": null,
+        "cheers": 2,
+        "bgWins": null,
+        "falling": 1,
         "deaths": 19
       }
     },
@@ -282,8 +346,11 @@
         "achievementPoints": 23380,
         "itemLevel": 573,
         "mounts": 388,
-        "falling": 23,
         "quests": 1920,
+        "LOL'd": 50,
+        "cheers": 71,
+        "bgWins": 106,
+        "falling": 23,
         "deaths": 604
       }
     },
@@ -296,8 +363,11 @@
         "achievementPoints": 13875,
         "itemLevel": 227,
         "mounts": 196,
-        "falling": 14,
         "quests": 1783,
+        "LOL'd": 20,
+        "cheers": 9,
+        "bgWins": 57,
+        "falling": 14,
         "deaths": 248
       }
     },
@@ -310,8 +380,11 @@
         "achievementPoints": 13150,
         "itemLevel": 331,
         "mounts": 160,
-        "falling": null,
         "quests": 389,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 3
       }
     },
@@ -324,8 +397,11 @@
         "achievementPoints": 13115,
         "itemLevel": 420,
         "mounts": 156,
-        "falling": null,
         "quests": 436,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 3
       }
     },
@@ -338,8 +414,11 @@
         "achievementPoints": 13865,
         "itemLevel": 119,
         "mounts": 196,
-        "falling": 4,
         "quests": 1013,
+        "LOL'd": 5,
+        "cheers": 2,
+        "bgWins": 4,
+        "falling": 4,
         "deaths": 41
       }
     },
@@ -352,8 +431,11 @@
         "achievementPoints": 23200,
         "itemLevel": 145,
         "mounts": 385,
-        "falling": null,
         "quests": 165,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": null,
         "deaths": 4
       }
     },
@@ -366,8 +448,11 @@
         "achievementPoints": 19065,
         "itemLevel": 681,
         "mounts": 345,
-        "falling": 30,
         "quests": 1208,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": null,
+        "falling": 30,
         "deaths": 212
       }
     },
@@ -380,8 +465,11 @@
         "achievementPoints": 20155,
         "itemLevel": 116,
         "mounts": 290,
-        "falling": null,
         "quests": 311,
+        "LOL'd": null,
+        "cheers": 1,
+        "bgWins": null,
+        "falling": null,
         "deaths": 1
       }
     },
@@ -394,8 +482,11 @@
         "achievementPoints": 13810,
         "itemLevel": 125,
         "mounts": 196,
-        "falling": 3,
         "quests": 925,
+        "LOL'd": null,
+        "cheers": null,
+        "bgWins": 1,
+        "falling": 3,
         "deaths": 23
       }
     },
@@ -408,8 +499,11 @@
         "achievementPoints": 6050,
         "itemLevel": 276,
         "mounts": 70,
-        "falling": 4,
         "quests": 2401,
+        "LOL'd": null,
+        "cheers": 1,
+        "bgWins": null,
+        "falling": 4,
         "deaths": 172
       }
     },
@@ -422,8 +516,11 @@
         "achievementPoints": 5875,
         "itemLevel": 87,
         "mounts": 60,
-        "falling": 17,
         "quests": 1237,
+        "LOL'd": null,
+        "cheers": 1,
+        "bgWins": null,
+        "falling": 17,
         "deaths": 164
       }
     }
