@@ -216,7 +216,7 @@
     <h2 id="board-title">Loading…</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Rank</th><th class="class-col">Class</th><th>Player</th><th id="value-heading"></th></tr></thead>
+        <thead><tr><th>Rank</th><th class="class-col">Race</th><th class="class-col">Class</th><th>Player</th><th id="value-heading"></th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
@@ -245,9 +245,29 @@
     Warrior: "warrior.png", Paladin: "paladin.png", Hunter: "hunter.png",
     Rogue: "rogue.png", Priest: "priest.png", Shaman: "shaman.png",
     Mage: "mage.png", Warlock: "warlock.png", Druid: "druid.png",
-    Monk: "monk.png", "Death Knight": "deathknight.png",
-    "Demon Hunter": "demonhunter.png", Evoker: "evoker.png"
+    Monk: "monk.png", "Death Knight": "deathknight.png"
   };
+
+  // Race icons in images/race_icons, named like "orc-male.png" or "nightelf-female.png":
+  // race in lowercase with spaces, apostrophes and hyphens removed, then -male or -female.
+  const RACE_FOLDER = "images/race_icons/";
+  // Races whose file name isn't just the race name with spaces removed
+  const RACE_FILE_NAMES = {
+    "Mag'har Orc": "maghar",
+    "Lightforged Draenei": "lightforged",
+    "Dark Iron Dwarf": "darkiron",
+    "Highmountain Tauren": "highmountain",
+    "Zandalari Troll": "zandalaritroll",
+    "Kul Tiran": "kultiranhuman",
+    "Earthen": "earthen",
+  };
+  function raceIcon(p) {
+    if (!p.race || !p.gender) return "";
+    const base = RACE_FILE_NAMES[p.race] || p.race.toLowerCase().replace(/['\s-]/g, "");
+    const file = `${base}-${p.gender.toLowerCase()}.png`;
+    // If an icon file is missing, hide it instead of showing a broken image
+    return `<img class="class-icon" src="${RACE_FOLDER}${file}" alt="${p.race}" onerror="this.remove()">`;
+  }
 
   let data;
 
@@ -275,6 +295,7 @@
       if (rank <= 3) tr.className = "top r" + rank;
       tr.innerHTML = `
         <td><span class="rank">${rank}</span></td>
+        <td class="class-col">${raceIcon(p)}</td>
         <td class="class-col">${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="${p.class}">` : ""}</td>
         <td><span class="player"></span><span class="meta"></span></td>
         <td>${value.toLocaleString()}</td>`;
@@ -358,7 +379,7 @@
     .catch(() => {
       document.getElementById("board-title").textContent = "The leaderboard couldn't load";
       document.getElementById("rows").innerHTML =
-        '<tr><td colspan="4">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
+        '<tr><td colspan="5">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
     });
 </script>
 </body>
