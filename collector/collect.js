@@ -24,11 +24,15 @@ const OUTPUT = path.join(__dirname, "..", "players.json");
 //   order:  "desc" = highest wins, "asc" = lowest wins
 //   stat:   the statistic's name EXACTLY as it appears in stats-list.txt
 // The first three tabs come from other parts of the API, so they have no "stat".
+
 const CATEGORIES = [
-  { key: "achievementPoints", label: "Achievement points", order: "desc" },
+  //{ key: "achievementPoints", label: "Achievement points", order: "desc" },
   { key: "itemLevel",         label: "Item level",         order: "desc" },
-  { key: "falling",            label: "Falling Deaths",   order: "desc", stat: "Deaths from falling" },
   { key: "quests",            label: "Quests completed",   order: "desc", stat: "Quests completed" },
+  { key: "LOL'd",             label: "Times LOL'd",        order: "desc", stat: "Total times LOL'd" },
+  { key: "cheers",            label: "Total cheers",       order: "desc", stat: "Total cheers" },
+  { key: "bgWins",            label: "Battleground wins",  order: "desc", stat: "Battlegrounds won" },
+  { key: "falling",           label: "Falling Deaths",     order: "desc", stat: "Deaths from falling" },
   { key: "deaths",            label: "Fewest deaths",      order: "asc",  stat: "Total deaths", column: "Deaths" },
 ];
 // ----------------------------------------
