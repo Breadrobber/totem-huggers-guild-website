@@ -52,6 +52,7 @@
       "name": "Nottuesday",
       "class": "Priest",
       "race": "Human",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 20170,
@@ -69,6 +70,7 @@
       "name": "Notmonday",
       "class": "Druid",
       "race": "Night Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 77,
         "achievementPoints": 19540,
@@ -86,6 +88,7 @@
       "name": "Shine",
       "class": "Paladin",
       "race": "Lightforged Draenei",
+      "gender": "FEMALE",
       "stats": {
         "level": 64,
         "achievementPoints": 22980,
@@ -103,6 +106,7 @@
       "name": "Wraith",
       "class": "Death Knight",
       "race": "Void Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -120,6 +124,7 @@
       "name": "Karma",
       "class": "Monk",
       "race": "Void Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -137,6 +142,7 @@
       "name": "Arc",
       "class": "Mage",
       "race": "Human",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -154,6 +160,7 @@
       "name": "Onyx",
       "class": "Warrior",
       "race": "Dracthyr",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -171,6 +178,7 @@
       "name": "Rainade",
       "class": "Hunter",
       "race": "Human",
+      "gender": "FEMALE",
       "stats": {
         "level": 90,
         "achievementPoints": 20755,
@@ -188,6 +196,7 @@
       "name": "Shayne",
       "class": "Hunter",
       "race": "Void Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 60,
         "achievementPoints": 23190,
@@ -205,6 +214,7 @@
       "name": "Vesper",
       "class": "Rogue",
       "race": "Night Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23390,
@@ -222,6 +232,7 @@
       "name": "Notfriday",
       "class": "Monk",
       "race": "Void Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 90,
         "achievementPoints": 20860,
@@ -239,6 +250,7 @@
       "name": "Topchief",
       "class": "Warrior",
       "race": "Dwarf",
+      "gender": "MALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13355,
@@ -256,6 +268,7 @@
       "name": "Notthursday",
       "class": "Demon Hunter",
       "race": "Night Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 20345,
@@ -273,6 +286,7 @@
       "name": "Greatwizardx",
       "class": "Druid",
       "race": "Night Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13495,
@@ -290,6 +304,7 @@
       "name": "Biglizard",
       "class": "Evoker",
       "race": "Dracthyr",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13115,
@@ -307,6 +322,7 @@
       "name": "Dimfish",
       "class": "Paladin",
       "race": "Dark Iron Dwarf",
+      "gender": "MALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13775,
@@ -324,6 +340,7 @@
       "name": "Notcorrupted",
       "class": "Warlock",
       "race": "Void Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 19540,
@@ -341,6 +358,7 @@
       "name": "Six",
       "class": "Hunter",
       "race": "Draenei",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 23380,
@@ -358,6 +376,7 @@
       "name": "Sadfish",
       "class": "Monk",
       "race": "Dwarf",
+      "gender": "MALE",
       "stats": {
         "level": 90,
         "achievementPoints": 13875,
@@ -375,6 +394,7 @@
       "name": "Crackpants",
       "class": "Warlock",
       "race": "Draenei",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13150,
@@ -392,6 +412,7 @@
       "name": "Redheadgf",
       "class": "Mage",
       "race": "Gnome",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13115,
@@ -409,6 +430,7 @@
       "name": "Breadrobber",
       "class": "Rogue",
       "race": "Night Elf",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13865,
@@ -426,6 +448,7 @@
       "name": "Shin",
       "class": "Shaman",
       "race": "Draenei",
+      "gender": "FEMALE",
       "stats": {
         "level": 41,
         "achievementPoints": 23200,
@@ -443,6 +466,7 @@
       "name": "Ophana",
       "class": "Paladin",
       "race": "Lightforged Draenei",
+      "gender": "FEMALE",
       "stats": {
         "level": 80,
         "achievementPoints": 19065,
@@ -460,6 +484,7 @@
       "name": "Notchief",
       "class": "Hunter",
       "race": "Undead",
+      "gender": "FEMALE",
       "stats": {
         "level": 31,
         "achievementPoints": 20155,
@@ -477,6 +502,7 @@
       "name": "Lazyknight",
       "class": "Death Knight",
       "race": "Dwarf",
+      "gender": "MALE",
       "stats": {
         "level": 80,
         "achievementPoints": 13810,
@@ -494,6 +520,7 @@
       "name": "Magnus",
       "class": "Mage",
       "race": "Blood Elf",
+      "gender": "MALE",
       "stats": {
         "level": 90,
         "achievementPoints": 6050,
@@ -511,6 +538,7 @@
       "name": "Betrayedyou",
       "class": "Hunter",
       "race": "Human",
+      "gender": "MALE",
       "stats": {
         "level": 80,
         "achievementPoints": 5875,
