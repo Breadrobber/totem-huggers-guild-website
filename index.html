@@ -183,7 +183,17 @@
   .r3 .rank { background: #a8693f; }
   .r1 td { box-shadow: inset 0 1px 0 #4d3c22, inset 0 -1px 0 #4d3c22; }
 
+  .player-cell { display: flex; align-items: center; gap: 0.65rem; }
+  .avatar {
+    width: 40px; height: 40px;
+    border-radius: 4px;
+    border: 1px solid #5a4636;
+    flex-shrink: 0;
+  }
   .player { font-weight: 700; }
+  a.player { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+  a.player:hover { border-bottom-style: solid; }
+  .ext { font-size: 0.8em; color: var(--ash); margin-left: 0.3rem; }
   .meta { display: block; font-size: 0.9rem; color: var(--ash); font-weight: 400; }
 
   footer { text-align: center; color: var(--ash); font-size: 0.9rem; padding-bottom: 3rem; }
@@ -270,6 +280,33 @@
     return `<img class="class-icon" src="${RACE_FOLDER}${file}" alt="${p.race}" onerror="this.remove()">`;
   }
 
+  // Each character's page on Blizzard's Armory site
+  const ARMORY_REGION = "us";       // "eu" for EU realms
+  const ARMORY_LOCALE = "en-us";    // "en-gb" for EU
+
+  function armoryLink(p, span) {
+    if (!p.realm) { span.textContent = p.name; return span; }
+    const a = document.createElement("a");
+    a.className = "player";
+    a.href = `https://worldofwarcraft.blizzard.com/${ARMORY_LOCALE}/character/${ARMORY_REGION}/${p.realm}/${encodeURIComponent(p.name.toLowerCase())}`;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.textContent = p.name;
+    const icon = document.createElement("span");
+    icon.className = "ext";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = "↗";
+    a.appendChild(icon);
+    span.replaceWith(a);
+    return a;
+  }
+
+  // Blizzard's rendered character portrait, if there is one
+  function avatarImg(p) {
+    if (!p.avatar) return "";
+    return `<img class="avatar" src="${p.avatar}" alt="" loading="lazy" onerror="this.remove()">`;
+  }
+
   let data;
 
   function showBoard(category) {
@@ -298,10 +335,9 @@
         <td><span class="rank">${rank}</span></td>
         <td class="class-col">${raceIcon(p)}</td>
         <td class="class-col">${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="${p.class}">` : ""}</td>
-        <td><span class="player"></span><span class="meta"></span></td>
+        <td><div class="player-cell">${avatarImg(p)}<span><span class="player"></span><span class="meta"></span></span></div></td>
         <td>${value.toLocaleString()}</td>`;
-      const name = tr.querySelector(".player");
-      name.textContent = p.name;
+      const name = armoryLink(p, tr.querySelector(".player"));
       name.style.color = CLASS_COLORS[p.class] || "inherit";
       tr.querySelector(".meta").textContent = `${p.race} ${p.class}`;
       rows.appendChild(tr);
