@@ -77,11 +77,35 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
   /* Roster, grouped by class */
-  .roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-  .class-group { background: var(--iron-raised); border-top: 3px solid; border-radius: 3px; padding: 0.9rem 1rem 1rem; }
-  .class-group h3 { margin: 0 0 0.5rem; font-size: 1.15rem; display: flex; justify-content: space-between; }
-  .class-group h3 span { color: var(--ash); font-weight: 400; }
-  .class-group ul { list-style: none; margin: 0; padding: 0; }
+  .roster { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; align-items: start; }
+  .class-group { background: var(--iron-raised); border-top: 3px solid; border-radius: 3px; }
+  .class-group h3 { margin: 0; font-size: 1.15rem; }
+
+  /* The clickable class header with the arrow */
+  .class-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1rem;
+    background: none;
+    border: none;
+    font: inherit;
+    font-weight: 700;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .class-toggle .count { margin-left: auto; color: var(--ash); font-weight: 400; }
+  .class-toggle .arrow {
+    color: var(--bronze);
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+  }
+  .class-toggle[aria-expanded="true"] .arrow { transform: rotate(90deg); }
+  @media (prefers-reduced-motion: reduce) { .class-toggle .arrow { transition: none; } }
+
+  .class-group ul { list-style: none; margin: 0; padding: 0 1rem 1rem; }
   .class-group li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.2rem 0; font-size: 1rem; }
   .class-group li span { color: var(--ash); white-space: nowrap; }
 
@@ -272,13 +296,24 @@
       const box = document.createElement("div");
       box.className = "class-group";
       box.style.borderTopColor = CLASS_COLORS[cls] || "var(--bronze)";
-      box.innerHTML = `<h3></h3><ul></ul>`;
-      const h3 = box.querySelector("h3");
-      h3.textContent = cls;
-      h3.style.color = CLASS_COLORS[cls] || "inherit";
-      const count = document.createElement("span");
-      count.textContent = members.length;
-      h3.appendChild(count);
+      const listId = "roster-" + cls.replace(/\s+/g, "-").toLowerCase();
+      box.innerHTML = `
+        <h3><button class="class-toggle" aria-expanded="false" aria-controls="${listId}">
+          <span class="arrow" aria-hidden="true">▶</span>
+          <span class="name"></span>
+          <span class="count"></span>
+        </button></h3>
+        <ul id="${listId}" hidden></ul>`;
+      const toggle = box.querySelector(".class-toggle");
+      toggle.style.color = CLASS_COLORS[cls] || "inherit";
+      toggle.querySelector(".name").textContent = cls;
+      toggle.querySelector(".count").textContent = members.length;
+      // Click the header to open or close the list of names
+      toggle.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        box.querySelector("ul").hidden = open;
+      });
       members.forEach(p => {
         const li = document.createElement("li");
         li.textContent = p.name;
