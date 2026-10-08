@@ -15,9 +15,10 @@
       "order": "desc"
     },
     {
-      "key": "mounts",
-      "label": "Mounts collected",
-      "order": "desc"
+      "key": "falling",
+      "label": "Falling Deaths",
+      "order": "desc",
+      "stat": "Deaths from falling"
     },
     {
       "key": "quests",
@@ -43,6 +44,7 @@
         "achievementPoints": 20170,
         "itemLevel": 594,
         "mounts": 285,
+        "falling": 26,
         "quests": 3056,
         "deaths": 2260
       }
@@ -56,6 +58,7 @@
         "achievementPoints": 19540,
         "itemLevel": 353,
         "mounts": 278,
+        "falling": 34,
         "quests": 1462,
         "deaths": 356
       }
@@ -69,6 +72,7 @@
         "achievementPoints": 22980,
         "itemLevel": 278,
         "mounts": 384,
+        "falling": 23,
         "quests": 3563,
         "deaths": 997
       }
@@ -82,6 +86,7 @@
         "achievementPoints": 23390,
         "itemLevel": 566,
         "mounts": 392,
+        "falling": 24,
         "quests": 2062,
         "deaths": 675
       }
@@ -95,6 +100,7 @@
         "achievementPoints": 23390,
         "itemLevel": 611,
         "mounts": 391,
+        "falling": 21,
         "quests": 1699,
         "deaths": 602
       }
@@ -108,6 +114,7 @@
         "achievementPoints": 23390,
         "itemLevel": 610,
         "mounts": 391,
+        "falling": 2,
         "quests": 1511,
         "deaths": 190
       }
@@ -121,6 +128,7 @@
         "achievementPoints": 23390,
         "itemLevel": 570,
         "mounts": 391,
+        "falling": 34,
         "quests": 1954,
         "deaths": 820
       }
@@ -134,6 +142,7 @@
         "achievementPoints": 20755,
         "itemLevel": 217,
         "mounts": 302,
+        "falling": 333,
         "quests": 4911,
         "deaths": 4556
       }
@@ -147,6 +156,7 @@
         "achievementPoints": 23190,
         "itemLevel": 204,
         "mounts": 385,
+        "falling": 40,
         "quests": 2895,
         "deaths": 588
       }
@@ -160,6 +170,7 @@
         "achievementPoints": 23390,
         "itemLevel": 570,
         "mounts": 391,
+        "falling": 59,
         "quests": 3726,
         "deaths": 1494
       }
@@ -173,6 +184,7 @@
         "achievementPoints": 20860,
         "itemLevel": 228,
         "mounts": 303,
+        "falling": 51,
         "quests": 2344,
         "deaths": 824
       }
@@ -186,6 +198,7 @@
         "achievementPoints": 13355,
         "itemLevel": 427,
         "mounts": 178,
+        "falling": null,
         "quests": 700,
         "deaths": 2
       }
@@ -199,6 +212,7 @@
         "achievementPoints": 20345,
         "itemLevel": 103,
         "mounts": 299,
+        "falling": 187,
         "quests": 6589,
         "deaths": 3772
       }
@@ -212,6 +226,7 @@
         "achievementPoints": 13495,
         "itemLevel": 87,
         "mounts": 187,
+        "falling": 3,
         "quests": 873,
         "deaths": 115
       }
@@ -225,6 +240,7 @@
         "achievementPoints": 13115,
         "itemLevel": 379,
         "mounts": 156,
+        "falling": null,
         "quests": 422,
         "deaths": 12
       }
@@ -238,6 +254,7 @@
         "achievementPoints": 13775,
         "itemLevel": 77,
         "mounts": 194,
+        "falling": null,
         "quests": 377,
         "deaths": 8
       }
@@ -251,6 +268,7 @@
         "achievementPoints": 19540,
         "itemLevel": 424,
         "mounts": 278,
+        "falling": 1,
         "quests": 274,
         "deaths": 19
       }
@@ -264,6 +282,7 @@
         "achievementPoints": 23380,
         "itemLevel": 573,
         "mounts": 388,
+        "falling": 23,
         "quests": 1920,
         "deaths": 604
       }
@@ -277,6 +296,7 @@
         "achievementPoints": 13875,
         "itemLevel": 227,
         "mounts": 196,
+        "falling": 14,
         "quests": 1783,
         "deaths": 248
       }
@@ -290,6 +310,7 @@
         "achievementPoints": 13150,
         "itemLevel": 331,
         "mounts": 160,
+        "falling": null,
         "quests": 389,
         "deaths": 3
       }
@@ -303,6 +324,7 @@
         "achievementPoints": 13115,
         "itemLevel": 420,
         "mounts": 156,
+        "falling": null,
         "quests": 436,
         "deaths": 3
       }
@@ -316,6 +338,7 @@
         "achievementPoints": 13865,
         "itemLevel": 119,
         "mounts": 196,
+        "falling": 4,
         "quests": 1013,
         "deaths": 41
       }
@@ -329,6 +352,7 @@
         "achievementPoints": 23200,
         "itemLevel": 145,
         "mounts": 385,
+        "falling": null,
         "quests": 165,
         "deaths": 4
       }
@@ -342,6 +366,7 @@
         "achievementPoints": 19065,
         "itemLevel": 681,
         "mounts": 345,
+        "falling": 30,
         "quests": 1208,
         "deaths": 212
       }
@@ -355,6 +380,7 @@
         "achievementPoints": 20155,
         "itemLevel": 116,
         "mounts": 290,
+        "falling": null,
         "quests": 311,
         "deaths": 1
       }
@@ -368,6 +394,7 @@
         "achievementPoints": 13810,
         "itemLevel": 125,
         "mounts": 196,
+        "falling": 3,
         "quests": 925,
         "deaths": 23
       }
@@ -381,6 +408,7 @@
         "achievementPoints": 6050,
         "itemLevel": 276,
         "mounts": 70,
+        "falling": 4,
         "quests": 2401,
         "deaths": 172
       }
@@ -394,6 +422,7 @@
         "achievementPoints": 5875,
         "itemLevel": 87,
         "mounts": 60,
+        "falling": 17,
         "quests": 1237,
         "deaths": 164
       }
