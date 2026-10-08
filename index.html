@@ -180,6 +180,7 @@
   td { background: var(--iron-raised); padding: 0.7rem 1rem; }
   td:first-child { border-radius: 3px 0 0 3px; width: 4rem; }
   .class-col { width: 4rem; text-align: center; }
+  .level-col { width: 3.5rem; text-align: center; font-variant-numeric: tabular-nums; }
   .class-icon {
     width: 28px;
     height: 28px;
@@ -247,9 +248,9 @@
     <h2 id="board-title">Loading…</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Rank</th><th class="class-col">Race</th><th class="class-col">Class</th><th>Player</th><th id="value-heading"></th></tr></thead>
+        <thead><tr><th>Rank</th><th class="class-col">Race</th><th class="class-col">Class</th><th class="level-col">Level</th><th>Player</th><th id="value-heading"></th></tr></thead>
         <tbody id="rows"></tbody>
-        <tfoot id="rows-no-match" hidden><tr><td colspan="5" class="no-match">No players match that name.</td></tr></tfoot>
+        <tfoot id="rows-no-match" hidden><tr><td colspan="6" class="no-match">No players match that name.</td></tr></tfoot>
       </table>
     </div>
     </section>
@@ -366,6 +367,7 @@
         <td><span class="rank">${rank}</span></td>
         <td class="class-col">${raceIcon(p)}</td>
         <td class="class-col">${CLASS_ICONS[p.class] ? `<img class="class-icon" src="${ICON_FOLDER}${CLASS_ICONS[p.class]}" alt="${p.class}">` : ""}</td>
+        <td class="level-col">${p.stats.level ?? ""}</td>
         <td><div class="player-cell">${avatarImg(p)}<span><span class="player"></span><span class="meta"></span></span></div></td>
         <td>${value.toLocaleString()}</td>`;
       const name = armoryLink(p, tr.querySelector(".player"));
@@ -460,7 +462,7 @@
     .catch(() => {
       document.getElementById("board-title").textContent = "The leaderboard couldn't load";
       document.getElementById("rows").innerHTML =
-        '<tr><td colspan="5">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
+        '<tr><td colspan="6">Check that players.json is in the same folder as index.html and that its name is spelled exactly the same.</td></tr>';
     });
 </script>
 </body>
