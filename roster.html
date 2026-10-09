@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Totem Huggers — Roster</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Alegreya:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header class="image-banner">
+    <h1><a href="index.html"><img src="images/banner.png" alt="Totem Huggers"></a></h1>
+  </header>
+
+  <nav class="menu" aria-label="Main menu">
+    <ul>
+      <li><a href="index.html">Leaderboard</a></li>
+      <li><a href="roster.html">Roster</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="notice" id="notice" hidden>
+      <strong>Sample data.</strong> These are made-up players so we can test the page. Real guild stats arrive after WoW: Forever launches on November 4.
+    </div>
+
+    <section id="roster">
+      <h2>Roster</h2>
+      <p id="roster-count" class="meta"></p>
+      <input type="search" id="roster-search" class="search" placeholder="Search players…" aria-label="Search roster players by name">
+      <p class="no-match" id="roster-no-match" hidden>No players match that name.</p>
+      <div class="roster" id="roster-list"></div>
+    </section>
+    <section id="composition">
+      <h2>Composition</h2>
+      <div class="chart-tabs" id="chart-tabs" role="group" aria-label="Choose a breakdown"></div>
+      <div class="bars" id="bars"></div>
+    </section>
+  </main>
+
+  <footer id="updated"></footer>
+
+<script src="app.js"></script>
+</body>
+</html>
