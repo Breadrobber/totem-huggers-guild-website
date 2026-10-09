@@ -188,7 +188,7 @@ const CLASS_COLORS = {
     });
     // Levels read best in order; everything else by size
     const entries = Object.entries(counts).sort((a, b) =>
-      bd.key === "level" ? a[0].localeCompare(b[0], undefined, { numeric: true }) : b[1] - a[1]
+      bd.key === "level" ? b[0].localeCompare(a[0], undefined, { numeric: true }) : b[1] - a[1]
     );
     const most = Math.max(...entries.map(e => e[1]));
     const bars = document.getElementById("bars");
