@@ -2,7 +2,7 @@
   "guild": "Not Clan",
   "faction": "Alliance",
   "sampleData": false,
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "categories": [
     {
       "key": "itemLevel",
@@ -16,7 +16,7 @@
       "stat": "Quests completed"
     },
     {
-      "key": "LOL'd",
+      "key": "lold",
       "label": "Times LOL'd",
       "order": "desc",
       "stat": "Total times LOL'd"
@@ -35,7 +35,7 @@
     },
     {
       "key": "falling",
-      "label": "Falling Deaths",
+      "label": "Falling deaths",
       "order": "desc",
       "stat": "Deaths from falling"
     },
@@ -53,7 +53,7 @@
     },
     {
       "key": "heroicLKkills",
-      "label": "Lich King Kills",
+      "label": "Lich King kills",
       "order": "desc",
       "stat": "Victories over the Lich King (Heroic Icecrown 25 player)"
     },
@@ -63,6 +63,48 @@
       "order": "asc",
       "stat": "Total deaths",
       "column": "Deaths"
+    },
+    {
+      "key": "elixirs",
+      "label": "Elixirs consumed",
+      "order": "desc",
+      "stat": "Elixirs consumed"
+    },
+    {
+      "key": "beverages",
+      "label": "Beverages consumed",
+      "order": "desc",
+      "stat": "Beverages consumed"
+    },
+    {
+      "key": "foodEaten",
+      "label": "Food eaten",
+      "order": "desc",
+      "stat": "Food eaten"
+    },
+    {
+      "key": "healthstones",
+      "label": "Healthstones used",
+      "order": "desc",
+      "stat": "Healthstones used"
+    },
+    {
+      "key": "fishCaught",
+      "label": "Fish caught",
+      "order": "desc",
+      "stat": "Fish caught"
+    },
+    {
+      "key": "hearths",
+      "label": "Times hearthed",
+      "order": "desc",
+      "stat": "Number of times hearthed"
+    },
+    {
+      "key": "duelsWon",
+      "label": "Duels won",
+      "order": "desc",
+      "stat": "Duels won"
     }
   ],
   "players": [
@@ -79,14 +121,21 @@
         "itemLevel": 594,
         "mounts": 285,
         "quests": 3056,
-        "LOL'd": 204,
+        "lold": 204,
         "cheers": 111,
         "bgWins": 92,
         "falling": 26,
         "flightPath": 723,
         "baronKills": 3,
         "heroicLKkills": 2,
-        "deaths": 2260
+        "deaths": 2260,
+        "elixirs": 324,
+        "beverages": 245,
+        "foodEaten": 42,
+        "healthstones": 41,
+        "fishCaught": 91,
+        "hearths": 574,
+        "duelsWon": 311
       }
     },
     {
@@ -102,14 +151,21 @@
         "itemLevel": 353,
         "mounts": 278,
         "quests": 1462,
-        "LOL'd": 13,
+        "lold": 13,
         "cheers": 22,
         "bgWins": 2,
         "falling": 34,
         "flightPath": 102,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 356
+        "deaths": 356,
+        "elixirs": 563,
+        "beverages": 6,
+        "foodEaten": 1,
+        "healthstones": 15,
+        "fishCaught": null,
+        "hearths": 63,
+        "duelsWon": 22
       }
     },
     {
@@ -125,14 +181,21 @@
         "itemLevel": 278,
         "mounts": 384,
         "quests": 3563,
-        "LOL'd": 54,
+        "lold": 54,
         "cheers": 103,
         "bgWins": 109,
         "falling": 23,
         "flightPath": 377,
         "baronKills": null,
         "heroicLKkills": 4,
-        "deaths": 997
+        "deaths": 997,
+        "elixirs": 13,
+        "beverages": 27,
+        "foodEaten": 40,
+        "healthstones": 147,
+        "fishCaught": null,
+        "hearths": 395,
+        "duelsWon": 164
       }
     },
     {
@@ -148,14 +211,21 @@
         "itemLevel": 566,
         "mounts": 392,
         "quests": 2062,
-        "LOL'd": 26,
+        "lold": 26,
         "cheers": 45,
         "bgWins": 41,
         "falling": 24,
         "flightPath": 263,
         "baronKills": null,
         "heroicLKkills": 1,
-        "deaths": 675
+        "deaths": 675,
+        "elixirs": 63,
+        "beverages": 2,
+        "foodEaten": 33,
+        "healthstones": 73,
+        "fishCaught": null,
+        "hearths": 232,
+        "duelsWon": 89
       }
     },
     {
@@ -171,14 +241,21 @@
         "itemLevel": 611,
         "mounts": 391,
         "quests": 1699,
-        "LOL'd": 43,
+        "lold": 43,
         "cheers": 98,
         "bgWins": 58,
         "falling": 21,
         "flightPath": 102,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 602
+        "deaths": 602,
+        "elixirs": 1,
+        "beverages": 264,
+        "foodEaten": 10,
+        "healthstones": 66,
+        "fishCaught": 160,
+        "hearths": 152,
+        "duelsWon": 102
       }
     },
     {
@@ -194,14 +271,21 @@
         "itemLevel": 610,
         "mounts": 391,
         "quests": 1511,
-        "LOL'd": 9,
+        "lold": 9,
         "cheers": 33,
         "bgWins": 22,
         "falling": 2,
         "flightPath": 29,
         "baronKills": 1,
         "heroicLKkills": null,
-        "deaths": 190
+        "deaths": 190,
+        "elixirs": 10,
+        "beverages": 14,
+        "foodEaten": 124,
+        "healthstones": 17,
+        "fishCaught": null,
+        "hearths": 10,
+        "duelsWon": 46
       }
     },
     {
@@ -217,14 +301,21 @@
         "itemLevel": 570,
         "mounts": 391,
         "quests": 1954,
-        "LOL'd": 36,
+        "lold": 36,
         "cheers": 45,
         "bgWins": 85,
         "falling": 34,
         "flightPath": 68,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 820
+        "deaths": 820,
+        "elixirs": 27,
+        "beverages": 37,
+        "foodEaten": 124,
+        "healthstones": 133,
+        "fishCaught": 263,
+        "hearths": 85,
+        "duelsWon": 90
       }
     },
     {
@@ -240,14 +331,21 @@
         "itemLevel": 217,
         "mounts": 302,
         "quests": 4911,
-        "LOL'd": 576,
+        "lold": 576,
         "cheers": 182,
         "bgWins": 120,
         "falling": 333,
         "flightPath": 1571,
         "baronKills": 4,
         "heroicLKkills": 2,
-        "deaths": 4556
+        "deaths": 4556,
+        "elixirs": 168,
+        "beverages": 296,
+        "foodEaten": 48,
+        "healthstones": 489,
+        "fishCaught": 536,
+        "hearths": 1424,
+        "duelsWon": 949
       }
     },
     {
@@ -263,14 +361,21 @@
         "itemLevel": 204,
         "mounts": 385,
         "quests": 2895,
-        "LOL'd": 35,
+        "lold": 35,
         "cheers": 40,
         "bgWins": 51,
         "falling": 40,
         "flightPath": 235,
         "baronKills": null,
         "heroicLKkills": 1,
-        "deaths": 588
+        "deaths": 588,
+        "elixirs": 16,
+        "beverages": 12,
+        "foodEaten": 35,
+        "healthstones": 77,
+        "fishCaught": null,
+        "hearths": 185,
+        "duelsWon": 55
       }
     },
     {
@@ -286,14 +391,21 @@
         "itemLevel": 570,
         "mounts": 391,
         "quests": 3726,
-        "LOL'd": 156,
+        "lold": 156,
         "cheers": 93,
         "bgWins": 73,
         "falling": 59,
         "flightPath": 602,
         "baronKills": null,
         "heroicLKkills": 1,
-        "deaths": 1494
+        "deaths": 1494,
+        "elixirs": 8,
+        "beverages": 65,
+        "foodEaten": 258,
+        "healthstones": 168,
+        "fishCaught": 92,
+        "hearths": 642,
+        "duelsWon": 222
       }
     },
     {
@@ -309,14 +421,21 @@
         "itemLevel": 228,
         "mounts": 303,
         "quests": 2344,
-        "LOL'd": 9,
+        "lold": 9,
         "cheers": 85,
         "bgWins": 38,
         "falling": 51,
         "flightPath": 232,
         "baronKills": 9,
         "heroicLKkills": 6,
-        "deaths": 824
+        "deaths": 824,
+        "elixirs": 515,
+        "beverages": 41,
+        "foodEaten": 15,
+        "healthstones": 21,
+        "fishCaught": 727,
+        "hearths": 421,
+        "duelsWon": 380
       }
     },
     {
@@ -332,14 +451,21 @@
         "itemLevel": 427,
         "mounts": 178,
         "quests": 700,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": 35,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 2
+        "deaths": 2,
+        "elixirs": 4,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": 54,
+        "duelsWon": null
       }
     },
     {
@@ -355,14 +481,21 @@
         "itemLevel": 103,
         "mounts": 299,
         "quests": 6589,
-        "LOL'd": 244,
+        "lold": 244,
         "cheers": 244,
         "bgWins": 70,
         "falling": 187,
         "flightPath": 1981,
         "baronKills": 8,
         "heroicLKkills": 18,
-        "deaths": 3772
+        "deaths": 3772,
+        "elixirs": 3,
+        "beverages": 46,
+        "foodEaten": 61,
+        "healthstones": 139,
+        "fishCaught": 4356,
+        "hearths": 1467,
+        "duelsWon": 926
       }
     },
     {
@@ -378,14 +511,21 @@
         "itemLevel": 87,
         "mounts": 187,
         "quests": 873,
-        "LOL'd": 7,
+        "lold": 7,
         "cheers": 4,
         "bgWins": null,
         "falling": 3,
         "flightPath": 45,
         "baronKills": 3,
         "heroicLKkills": 1,
-        "deaths": 115
+        "deaths": 115,
+        "elixirs": 242,
+        "beverages": 7,
+        "foodEaten": 17,
+        "healthstones": 7,
+        "fishCaught": 1,
+        "hearths": 160,
+        "duelsWon": 18
       }
     },
     {
@@ -401,14 +541,21 @@
         "itemLevel": 379,
         "mounts": 156,
         "quests": 422,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": null,
         "baronKills": 3,
         "heroicLKkills": null,
-        "deaths": 12
+        "deaths": 12,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": 2,
+        "duelsWon": null
       }
     },
     {
@@ -424,14 +571,21 @@
         "itemLevel": 77,
         "mounts": 194,
         "quests": 377,
-        "LOL'd": 1,
+        "lold": 1,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": 5,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 8
+        "deaths": 8,
+        "elixirs": 32,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": 24,
+        "duelsWon": null
       }
     },
     {
@@ -447,14 +601,21 @@
         "itemLevel": 424,
         "mounts": 278,
         "quests": 274,
-        "LOL'd": null,
+        "lold": null,
         "cheers": 2,
         "bgWins": null,
         "falling": 1,
         "flightPath": 4,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 19
+        "deaths": 19,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": 17,
+        "fishCaught": null,
+        "hearths": 6,
+        "duelsWon": null
       }
     },
     {
@@ -470,14 +631,21 @@
         "itemLevel": 573,
         "mounts": 388,
         "quests": 1920,
-        "LOL'd": 50,
+        "lold": 50,
         "cheers": 71,
         "bgWins": 106,
         "falling": 23,
         "flightPath": 246,
         "baronKills": null,
         "heroicLKkills": 2,
-        "deaths": 604
+        "deaths": 604,
+        "elixirs": 65,
+        "beverages": 22,
+        "foodEaten": 108,
+        "healthstones": 82,
+        "fishCaught": 102,
+        "hearths": 213,
+        "duelsWon": 69
       }
     },
     {
@@ -493,14 +661,21 @@
         "itemLevel": 227,
         "mounts": 196,
         "quests": 1783,
-        "LOL'd": 20,
+        "lold": 20,
         "cheers": 9,
         "bgWins": 57,
         "falling": 14,
         "flightPath": 82,
         "baronKills": 5,
         "heroicLKkills": 7,
-        "deaths": 248
+        "deaths": 248,
+        "elixirs": 458,
+        "beverages": 2,
+        "foodEaten": 8,
+        "healthstones": 34,
+        "fishCaught": 2,
+        "hearths": 248,
+        "duelsWon": 6
       }
     },
     {
@@ -516,14 +691,21 @@
         "itemLevel": 331,
         "mounts": 160,
         "quests": 389,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": 3,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 3
+        "deaths": 3,
+        "elixirs": null,
+        "beverages": 2,
+        "foodEaten": null,
+        "healthstones": 46,
+        "fishCaught": null,
+        "hearths": 14,
+        "duelsWon": null
       }
     },
     {
@@ -539,14 +721,21 @@
         "itemLevel": 420,
         "mounts": 156,
         "quests": 436,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": 3,
         "baronKills": 1,
         "heroicLKkills": null,
-        "deaths": 3
+        "deaths": 3,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": 9,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": 1,
+        "duelsWon": null
       }
     },
     {
@@ -562,14 +751,21 @@
         "itemLevel": 119,
         "mounts": 196,
         "quests": 1013,
-        "LOL'd": 5,
+        "lold": 5,
         "cheers": 2,
         "bgWins": 4,
         "falling": 4,
         "flightPath": 4,
         "baronKills": 2,
         "heroicLKkills": 1,
-        "deaths": 41
+        "deaths": 41,
+        "elixirs": 78,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": 4,
+        "fishCaught": null,
+        "hearths": 52,
+        "duelsWon": 38
       }
     },
     {
@@ -585,14 +781,21 @@
         "itemLevel": 145,
         "mounts": 385,
         "quests": 165,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": null,
         "flightPath": 1,
         "baronKills": 1,
         "heroicLKkills": null,
-        "deaths": 4
+        "deaths": 4,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": 1,
+        "duelsWon": null
       }
     },
     {
@@ -608,14 +811,21 @@
         "itemLevel": 681,
         "mounts": 345,
         "quests": 1208,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": null,
         "falling": 30,
         "flightPath": 106,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 212
+        "deaths": 212,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": 8,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": null,
+        "duelsWon": null
       }
     },
     {
@@ -631,14 +841,21 @@
         "itemLevel": 116,
         "mounts": 290,
         "quests": 311,
-        "LOL'd": null,
+        "lold": null,
         "cheers": 1,
         "bgWins": null,
         "falling": null,
         "flightPath": 3,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 1
+        "deaths": 1,
+        "elixirs": null,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": null,
+        "fishCaught": null,
+        "hearths": null,
+        "duelsWon": null
       }
     },
     {
@@ -654,14 +871,21 @@
         "itemLevel": 125,
         "mounts": 196,
         "quests": 925,
-        "LOL'd": null,
+        "lold": null,
         "cheers": null,
         "bgWins": 1,
         "falling": 3,
         "flightPath": 4,
         "baronKills": 1,
         "heroicLKkills": 2,
-        "deaths": 23
+        "deaths": 23,
+        "elixirs": 43,
+        "beverages": null,
+        "foodEaten": null,
+        "healthstones": 1,
+        "fishCaught": null,
+        "hearths": 44,
+        "duelsWon": 66
       }
     },
     {
@@ -677,14 +901,21 @@
         "itemLevel": 276,
         "mounts": 70,
         "quests": 2401,
-        "LOL'd": null,
+        "lold": null,
         "cheers": 1,
         "bgWins": null,
         "falling": 4,
         "flightPath": 30,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 172
+        "deaths": 172,
+        "elixirs": null,
+        "beverages": 2,
+        "foodEaten": 124,
+        "healthstones": null,
+        "fishCaught": 59,
+        "hearths": 31,
+        "duelsWon": null
       }
     },
     {
@@ -700,14 +931,21 @@
         "itemLevel": 87,
         "mounts": 60,
         "quests": 1237,
-        "LOL'd": null,
+        "lold": null,
         "cheers": 1,
         "bgWins": null,
         "falling": 17,
         "flightPath": 167,
         "baronKills": null,
         "heroicLKkills": null,
-        "deaths": 164
+        "deaths": 164,
+        "elixirs": null,
+        "beverages": 7,
+        "foodEaten": 2,
+        "healthstones": 2,
+        "fishCaught": 62,
+        "hearths": 71,
+        "duelsWon": null
       }
     }
   ]
