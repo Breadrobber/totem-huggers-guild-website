@@ -20,7 +20,7 @@
   }
 
   /* Banner image */
-  .image-banner { width: 100%; max-width: 1600px; margin: 0 auto; }
+  .image-banner { width: 100%; margin: 0; }
   .image-banner h1 { margin: 0; }
   .image-banner img {
     display: block;
