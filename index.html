@@ -229,13 +229,13 @@
   .chart-tabs button[aria-pressed="true"] { background: var(--blood); border-color: var(--bronze); }
 
   .bars { display: grid; gap: 0.45rem; }
-  .bar-row { display: grid; grid-template-columns: 9rem 1fr 3.5rem; align-items: center; gap: 0.75rem; }
+  .bar-row { display: grid; grid-template-columns: 9rem 1fr 2.5rem; align-items: center; gap: 0.75rem; }
   .bar-label { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .bar-track { background: var(--iron-raised); border-radius: 3px; height: 1.6rem; overflow: hidden; }
   .bar-fill { display: block; height: 100%; border-radius: 3px 0 0 3px; min-width: 2px; }
   .bar-value { font-size: 0.95rem; color: var(--ash); text-align: right; font-variant-numeric: tabular-nums; }
   @media (max-width: 520px) {
-    .bar-row { grid-template-columns: 6.5rem 1fr 3rem; gap: 0.5rem; }
+    .bar-row { grid-template-columns: 6.5rem 1fr 2rem; gap: 0.5rem; }
     .bar-label { font-size: 0.9rem; }
   }
 
@@ -485,17 +485,15 @@
       bd.key === "level" ? a[0].localeCompare(b[0], undefined, { numeric: true }) : b[1] - a[1]
     );
     const most = Math.max(...entries.map(e => e[1]));
-    const total = data.players.length;
     const bars = document.getElementById("bars");
     bars.innerHTML = "";
     entries.forEach(([name, count]) => {
-      const pct = Math.round((count / total) * 100);
       const row = document.createElement("div");
       row.className = "bar-row";
       row.innerHTML = `
         <span class="bar-label"></span>
         <span class="bar-track"><span class="bar-fill"></span></span>
-        <span class="bar-value">${count} · ${pct}%</span>`;
+        <span class="bar-value">${count}</span>`;
       row.querySelector(".bar-label").textContent = name;
       const fill = row.querySelector(".bar-fill");
       fill.style.width = (count / most * 100) + "%";
